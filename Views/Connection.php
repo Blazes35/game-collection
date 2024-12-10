@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="../Assets/CSS/Connection.css">
 <body>
-    <div class="connection">
-        <div class="titre">
-            <h1>Se connecter a Game Collection</h1>
-        </div>
-        <div class="form">
-            <form action="index.php" method="post">
-                <label for="email">Email</label>
+<div class="container">
+        <div class="form-container">
+            <h1>Se connecter à Game Collection</h1>
+            <form action="" method="post">
+                <label for="email">Email :</label>
                 <input type="email" name="email" id="email" required>
-                <label for="password">Mot de passe</label>
+                
+                <label for="password">Mot de passe :</label>
                 <input type="password" name="password" id="password" required>
-                <input type="submit" value="Se connecter">
-                <a href="index.php?action=inscription">Pas encore inscrit ?</a>
+                
+                <button type="submit">SE CONNECTER</button>
             </form>
-    </div>
+            <a href="index.php?action=inscription" class="register-link">S'inscrire</a>
+        </div>
 </body>
 </html>

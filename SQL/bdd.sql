@@ -8,7 +8,7 @@ CREATE TABLE utilisateur (
     prenom VARCHAR(50) NOT NULL,
     nom VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(257) NOT NULL
 );
 
 -- Table jeu
@@ -20,7 +20,7 @@ CREATE TABLE jeu (
     plateforme VARCHAR(50),
     description TEXT,
     image_url VARCHAR(255),
-    site_url VARCHAR(255)
+    site_url VARCHAR(257)
 );
 
 -- Table de liaison utilisateur-jeu
@@ -57,4 +57,4 @@ VALUES
     (1, 2, 60),  -- Alice a joué 60 minutes à Cyberpunk
     (2, 3, 200), -- Bob a joué 200 minutes à Elden Ring
     (3, 1, 90),  -- Claire a joué 90 minutes à Zelda
-    (4, 4, 120000);  -- Aymeric a joué 100 minutes à Rocket League
+    (4, 4, 120000);  -- Aymeric a joué 120000 minutes à Rocket League
