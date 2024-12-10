@@ -12,7 +12,13 @@ class HomeController {
         $playerData = $this->model->getPlayerData($playerId);
         $playerGames = $this->model->getPlayerGames($playerId);
 
+        // Capture le contenu de home.php dans une variable
+        ob_start();
         include 'home.php';
+        $content = ob_get_clean();
+
+        // Inclure le layout avec le contenu
+        include 'layout.php';
     }
 
     public function handlePostRequest() {
