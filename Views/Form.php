@@ -10,37 +10,37 @@
     <div class="container">
         <h1>Ajouter un jeu à sa bibliothèque</h1>
         <p>Le jeu que vous souhaitez ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !</p>
-        <form>
+        <form method="post" action="../Controllers/FormController.php">
             <div class="form-group">
-                <label for="nom-jeu">Nom du jeu</label>
-                <input type="text" id="nom-jeu" placeholder="Nom du jeu">
+                <label for="nom">Nom du jeu</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom du jeu">
             </div>
             <div class="form-group">
-                <label for="editeur-jeu">Éditeur du jeu</label>
-                <input type="text" id="editeur-jeu" placeholder="Éditeur du jeu">
+                <label for="editeur">Éditeur du jeu</label>
+                <input type="text" id="editeur" name="editeur" placeholder="Éditeur du jeu">
             </div>
             <div class="form-group">
                 <label for="date-sortie">Sortie du jeu</label>
-                <input type="date" id="date-sortie">
+                <input type="date" name="date_sortie" id="date_sortie">
             </div>
             <div class="form-group platforms">
                 <label>Plateformes</label>
-                <label><input type="checkbox">Playstation</label>
-                <label><input type="checkbox">Xbox</label>
-                <label><input type="checkbox">Nintendo</label>
-                <label><input type="checkbox">PC</label>
+                <label><input type="checkbox" id="plateforme" name="plateforme">Playstation</label>
+                <label><input type="checkbox" id="plateforme" name="plateforme">Xbox</label>
+                <label><input type="checkbox" id="plateforme" name="plateforme">Nintendo</label>
+                <label><input type="checkbox" id="plateforme" name="plateforme">PC</label>
             </div>
             <div class="form-group">
-                <label for="description-jeu">Description du jeu</label>
-                <textarea id="description-jeu" placeholder="Description du jeu"></textarea>
+                <label for="description">Description du jeu</label>
+                <textarea id="description" placeholder="Description du jeu" name="description"></textarea>
             </div>
             <div class="form-group">
-                <label for="url-cover">URL de la cover</label>
-                <input type="text" id="url-cover" placeholder="URL de la cover">
+                <label for="image_url">URL de la cover</label>
+                <input type="text" id="image_url" placeholder="URL de la cover" name="image_url">
             </div>
             <div class="form-group">
-                <label for="url-site">URL du site</label>
-                <input type="text" id="url-site" placeholder="URL du site">
+                <label for="site_url">URL du site</label>
+                <input type="text" id="site_url" placeholder="URL du site" name="site_url">
             </div>
             <button type="submit">AJOUTER LE JEU</button>
         </form>
