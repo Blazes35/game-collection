@@ -1,0 +1,98 @@
+/* Styles globaux */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1b29; /* Couleur de fond sombre */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Conteneur du formulaire */
+.form-container {
+    background-color: #242331; /* Couleur du conteneur */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Champs de formulaire */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c1b29;
+    color: white;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* Bouton */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a5acd;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #836fff;
+}
+
+/* Lien d'inscription */
+.register-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: white;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
