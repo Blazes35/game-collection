@@ -1,5 +1,7 @@
 <?php
 require_once('Models/SingUpModel.php');
+$test = select ();
+var_dump($test);
 isset($_SERVER('REQUEST_METHOD')=='POST'){
     if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmpassword'])){
         $nom = htmlspecialchars($_POST['nom']);

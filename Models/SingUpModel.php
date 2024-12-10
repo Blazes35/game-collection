@@ -11,5 +11,11 @@ class SingUpModel extends Model {
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         return $stmt->execute();
     }
+
+    public function select(){
+        $stmt = self::$db->prepare("SELECT * FROM UTILISATEUR");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
