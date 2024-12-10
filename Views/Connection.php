@@ -11,7 +11,7 @@
             <h1>Se connecter a Game Collection</h1>
         </div>
         <div class="form">
-            <form action="index.php" method="post">
+            <form action="" method="post">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required>
                 <label for="password">Mot de passe</label>
