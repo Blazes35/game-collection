@@ -1,0 +1,11 @@
+{
+    "name": "lorid/game-collection",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Blazes35",
+            "email": "loridam2@gmail.com"
+        }
+    ],
+    "require": {}
+}
