@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+:root {
+    --background-color: #211F2A;
+    --color-police: #fff;
+    --color-overlay: #ff00ff;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    background: var(--background-color);
+    color: var(--color-police);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color); /* Couleur de fond */
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo .game {
+    color: var(--color-overlay); /* Couleur violette pour "Game" */
+}
+
+.logo .collection {
+    color: var(--color-police); /* Couleur blanche pour "Collection" */
+    font-size: 12px; /* Plus petit pour "Collection" */
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Navigation à droite */
+.navbar-right a {
+    text-decoration: none;
+    color: var(--color-police);
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: var(--color-overlay); /* Changement de couleur au survol */
+}
+
+footer{
+    background-color: var(--background-color);
+    color: var(--color-police);
+    text-align: center;
+    padding: 20px 0;
+}
