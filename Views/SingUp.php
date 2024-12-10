@@ -7,7 +7,6 @@
 </head>
 <body>
     <div class="singup">
-        <?php var_dump($test);?>
         <div class="titre">
             <h1>Inscription</h1>
         </div>
