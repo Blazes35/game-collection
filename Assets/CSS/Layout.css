@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    background: #211F2A;
+    color: #fff;
+}
+
+header{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+a:visited{
+    color: #FFF;
+}

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Collection</title>
-    <link rel="stylesheet" href="/path/to/your/styles.css">
+    <link rel="stylesheet" href="../Assets/CSS/Layout.css">
 </head>
 <body>
     <header>
         <h1>Game Collection</h1>
         <nav>
             <ul>
-                <li><a href="/"><img src="../Assets/CSS/logo.png" alt="Game Collection Logo" style="height: 50px;"></a></li>
+                <li><a href="/"><img src="../Assets/Images/logo.png" alt="Game Collection Logo" style="height: 50px;"></a></li>
                 <li><a href="/games">Ma bibliothèque</a></li>
                 <li><a href="/about">Ajouter un jeu</a></li>
                 <li><a href="/contact">Classement</a></li>
