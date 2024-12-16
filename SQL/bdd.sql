@@ -1,7 +1,3 @@
--- Création de la base de données
-CREATE DATABASE IF NOT EXISTS gaming_platform;
-USE gaming_platform;
-
 -- Table utilisateur
 CREATE TABLE utilisateur (
     id INT AUTO_INCREMENT PRIMARY KEY,
