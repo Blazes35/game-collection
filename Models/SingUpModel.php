@@ -10,6 +10,7 @@ class SingUpModel extends DBModel {
         $stmt->bindParam(':prenom', $prenom, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        echo 'ok';
         return $stmt->execute();
     }
 
