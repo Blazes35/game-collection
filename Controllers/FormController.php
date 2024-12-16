@@ -1,6 +1,6 @@
 <?php
 
-require '../Models/FormModel.php';
+require 'Models/FormModel.php';
 $model = new FormModel;
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
