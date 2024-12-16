@@ -12,7 +12,11 @@ switch ($page) {
     case 'WithoutForm':
         include 'Controllers/AddGameWithoutForm.php';
         break;
+    case 'SignUp':
+        include './Controllers/SignUpController.php';
+        break;
     default:
         include './Views/Error404.php';
         break;
+
 }
