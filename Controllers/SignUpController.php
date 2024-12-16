@@ -1,6 +1,6 @@
 <?php
 require_once('../Models/SingUpModel.php');
-$model = new SingUpModel(); 
+$model = new SignUpModel(); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmpassword'])) {
@@ -22,5 +22,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } 
     }
 }
-require_once('../Views/SingUp.php');
+require_once('../Views/SignUp.php');
 ?>
