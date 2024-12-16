@@ -1,6 +1,6 @@
 <?php
 
-require 'FormModel.php';
+require '../Models/FormModel.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     if(isset($_POST['nom']) && isset($_POST['editeur']) && isset($_POST['date_sortie']) && isset($_POST['plateforme']) && isset($_POST['description']) && isset($_POST['image_url']) && isset($_POST['site_url'])){
