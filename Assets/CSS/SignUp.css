@@ -11,16 +11,29 @@
 /* Titre */
 .titre h1 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
     color: #ffffff;
 }
 
-/* Style du formulaire */
+.formulaire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Hauteur de la fenêtre pour centrer verticalement */
+}
+
+/* Styles pour le formulaire */
 .formulaire form {
     display: flex;
     flex-direction: column;
+    background-color: #252836; /* Couleur du conteneur */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    max-width: 90%;
 }
 
 label {

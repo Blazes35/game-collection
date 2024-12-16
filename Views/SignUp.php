@@ -1,3 +1,7 @@
+<?php
+  $title = "Inscription";
+  ob_start();
+?>
 <link rel="stylesheet" href="../Assets/CSS/SignUp.css">
 <body>
     <div class="singup">
@@ -22,3 +26,7 @@
         </div>
     </div>
 </body>
+<?php
+  $content = ob_get_clean();
+  include 'Layout.php';
+?>

@@ -1,5 +1,9 @@
+<?php
+  ob_start();  
+?>
 <link rel="stylesheet" href="../CSS/Home.css">
 <?php
+
 // Supposons que les données du joueur et ses jeux soient passés par le contrôleur
 if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];
@@ -31,3 +35,8 @@ if (isset($playerData) && isset($playerGames)) {
     <input type="text" id="player_id" name="player_id" required>
     <button type="submit">Envoyer</button>
 </form>
+
+<?php
+  $content = ob_get_clean();
+  include 'Layout.php';
+?>

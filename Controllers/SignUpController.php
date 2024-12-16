@@ -1,7 +1,6 @@
 <?php
 require_once('../Models/SignUpModel.php');
 $model = new SignUpModel(); 
-include '../Views/Layout.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
