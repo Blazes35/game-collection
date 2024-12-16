@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Models/DBModel.php');
+require_once('Models/DBModel.php');
 class ConnectionModel extends DBModel {
     public function __construct() {
         parent::__construct();

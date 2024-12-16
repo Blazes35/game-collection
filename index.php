@@ -19,19 +19,19 @@ try {
     $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
     switch ($page) {
         case 'Home':
-            include './Controllers/HomeController.php';
+            include 'Controllers/HomeController.php';
             break;
         case 'WithoutForm':
             include 'Controllers/AddGameWithoutForm.php';
             break;
         case 'SignUp':
-            include './Controllers/SignUpController.php';
+            include 'Controllers/SignUpController.php';
             break;
             case 'Connection':
-                include './Controllers/ConnectionController.php';
+                include 'Controllers/ConnectionController.php';
             break;
         default:
-            include './Views/Error404.php';
+            include 'Views/Error404.php';
             break;
     }
 } catch (PDOException $e) {

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un jeu à sa bibliothèque</title>
-    <link rel="stylesheet" href="../Assets/CSS/Form.css">
+    <link rel="stylesheet" href="Assets/CSS/Form.css">
 </head>
 <body>
     <div class="container">
         <h1>Ajouter un jeu à sa bibliothèque</h1>
         <p>Le jeu que vous souhaitez ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !</p>
-        <form method="post" action="../Controllers/FormController.php">
+        <form method="post" action="Controllers/FormController.php">
             <div class="form-group">
                 <label for="nom">Nom du jeu</label>
                 <input type="text" id="nom" name="nom" placeholder="Nom du jeu">

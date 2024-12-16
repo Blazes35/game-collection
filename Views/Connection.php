@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 <body>
-<link rel="stylesheet" href="../Assets/CSS/Connection.css">
+<link rel="stylesheet" href="Assets/CSS/Connection.css">
 <body>
 <div class="container">
         <div class="form-container">
@@ -14,7 +14,7 @@
                 
                 <button type="submit">SE CONNECTER</button>
             </form>
-            <a href="../Controllers/SignUpController.php" class="register-link">S'inscrire</a>
+            <a href="Controllers/SignUpController.php" class="register-link">S'inscrire</a>
         </div>
 </body>
 <?php
