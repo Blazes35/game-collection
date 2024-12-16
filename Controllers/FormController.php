@@ -1,6 +1,5 @@
 <?php
 
-require 'DBModel.php';
 require 'FormModel.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
