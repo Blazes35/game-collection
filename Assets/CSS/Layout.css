@@ -27,13 +27,24 @@ html, body {
     font-weight: bold;
 }
 
+.logo a{
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
 .logo .game {
+    text-decoration: none;
+    font-size: 32px; /* Plus petit pour "Collection" */
     color: var(--color-overlay); /* Couleur violette pour "Game" */
 }
 
 .logo .collection {
+    text-decoration: none;
     color: var(--color-police); /* Couleur blanche pour "Collection" */
-    font-size: 12px; /* Plus petit pour "Collection" */
+    font-size: 22px; /* Plus petit pour "Collection" */
     margin-left: 5px;
     vertical-align: middle;
 }

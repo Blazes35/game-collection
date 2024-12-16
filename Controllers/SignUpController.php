@@ -1,7 +1,6 @@
 <?php
 require_once('../Models/SignUpModel.php');
 $model = new SignUpModel(); 
-include '../Views/Layout.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -17,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $insert = $model->insertuser($nom, $prenom, $email, $password);
                 if ($insert) {
-                    header('Location: index.php');
+                    header('Location: ../Controllers/ConnectionController.php');
                     exit();
                 } 
             }

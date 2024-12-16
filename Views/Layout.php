@@ -8,10 +8,11 @@
 </head>
 <body>
 <header class="navbar">
-        <div class="navbar-left">
-            <div class="logo">
+        <div class="logo">
+            <a href="./HomeController.php">
                 <span class="game">Game</span><span class="collection">Collection</span>
-            </div>
+            </a>
+        </div>
         </div>
         <nav class="navbar-right">
             <a href="#bibliotheque">MA BIBLIOTHÈQUE</a>
