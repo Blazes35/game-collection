@@ -1,4 +1,5 @@
-
+<?php ob_start(); ?>
+<body>
 <link rel="stylesheet" href="../Assets/CSS/Connection.css">
 <body>
 <div class="container">
@@ -16,4 +17,7 @@
             <a href="../Controllers/SignUpController.php" class="register-link">S'inscrire</a>
         </div>
 </body>
-</html>
+<?php
+  $content = ob_get_clean();
+  include 'Layout.php';
+?>
