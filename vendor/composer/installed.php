@@ -3,7 +3,7 @@
         'name' => 'lorid/game-collection',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7a64254d9a7b5f517bd2cdb8a82e1bc21bdca4b7',
+        'reference' => 'f2161ee53c8f6d031f5ce91fede6a396c837b8ed',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'lorid/game-collection' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7a64254d9a7b5f517bd2cdb8a82e1bc21bdca4b7',
+            'reference' => 'f2161ee53c8f6d031f5ce91fede6a396c837b8ed',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
