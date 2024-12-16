@@ -1,5 +1,5 @@
 <?php
-require_once('../Models/SignUpModel.php');
+require_once('Models/SignUpModel.php');
 $model = new SignUpModel(); 
 
 
@@ -16,12 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $insert = $model->insertuser($nom, $prenom, $email, $password);
                 if ($insert) {
-                    header('Location: ../Controllers/ConnectionController.php');
+                    header('Location: Controllers/ConnectionController.php');
                     exit();
                 } 
             }
         } 
     }
 }
-require_once('../Views/SignUp.php');
+require_once('Views/SignUp.php');
 ?>

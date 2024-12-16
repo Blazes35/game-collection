@@ -1,7 +1,7 @@
 <?php
   ob_start();  
 ?>
-<link rel="stylesheet" href="../CSS/Home.css">
+<link rel="stylesheet" href="CSS/Home.css">
 <?php
 
 // Supposons que les données du joueur et ses jeux soient passés par le contrôleur

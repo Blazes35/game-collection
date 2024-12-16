@@ -2,7 +2,7 @@
   $title = "Inscription";
   ob_start();
 ?>
-<link rel="stylesheet" href="../Assets/CSS/SignUp.css">
+<link rel="stylesheet" href="Assets/CSS/SignUp.css">
 <body>
     <div class="singup">
         <div class="titre">

@@ -1,5 +1,5 @@
 <?php
-require_once('../Models/DBModel.php');
+require_once('Models/DBModel.php');
 class SignUpModel extends DBModel {
     public function __construct() {
         parent::__construct();
