@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('../Models/ConnectionModel.php');
 $model = new ConnectionModel();
 
@@ -12,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             if(password_verify($password, $user['password'])){
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-                header('Location: index.php');
+                header('Location: ');
             }else{
                 echo "<div class= 'errormdp'>Mot de passe incorrect</div>";
             }
