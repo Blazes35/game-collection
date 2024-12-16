@@ -25,10 +25,10 @@
             </div>
             <div class="form-group platforms">
                 <label>Plateformes</label>
-                <label><input type="checkbox" id="plateforme" name="plateforme">Playstation</label>
-                <label><input type="checkbox" id="plateforme" name="plateforme">Xbox</label>
-                <label><input type="checkbox" id="plateforme" name="plateforme">Nintendo</label>
-                <label><input type="checkbox" id="plateforme" name="plateforme">PC</label>
+                <label><input type="checkbox" id="Playstation" name="plateforme[]" value="Playstation">Playstation</label>
+                <label><input type="checkbox" id="Xbox" name="plateforme[]" value="Xbox">Xbox</label>
+                <label><input type="checkbox" id="Nintendo" name="plateforme[]" value="Nintendo">Nintendo</label>
+                <label><input type="checkbox" id="PC" name="plateforme[]" value="PC">PC</label>
             </div>
             <div class="form-group">
                 <label for="description">Description du jeu</label>
