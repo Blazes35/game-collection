@@ -19,7 +19,7 @@
                 
                 <button type="submit">SE CONNECTER</button>
             </form>
-            <a href="index.php?action=inscription" class="register-link">S'inscrire</a>
+            <a href="Home.php" class="register-link">S'inscrire</a>
         </div>
 </body>
 </html>

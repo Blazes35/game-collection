@@ -23,3 +23,4 @@ switch ($page) {
         break;
 
 }
+?>
