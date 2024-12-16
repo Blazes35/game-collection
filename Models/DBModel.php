@@ -11,9 +11,16 @@ class DBModel {
 
     public function connect() {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=td21-4', 'root', '');
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            self::$db = $db;
+            $host = $_ENV['DB_HOST'];
+            $port = $_ENV['DB_PORT'];
+            $dbname = $_ENV['DB_NAME'];
+            $user = $_ENV['DB_USER'];
+            $password = $_ENV['DB_PASSWORD'];
+
+            $dsn = "mysql:host=$host;port=$port;dbname=$dbname";
+            $pdo = new PDO($dsn, $user, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$db = $pdo;
         } catch (PDOException $e) {
             self::$db = null;
             throw new Exception("Erreur de connexion à la base de données : " . $e->getMessage());
