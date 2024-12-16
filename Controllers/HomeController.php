@@ -3,17 +3,23 @@ require_once '../Models/HomeModel.php';
 
 $model = new HomeModel();
 
-   
-        $playerData = $model->getPlayerData(1);
-        $playerGames = $model->getPlayerGames(1);
+if (!isset($_SESSION['user_id'])) {
+    // L'utilisateur n'est pas connecté
+    $content = '<p>Vous n\'êtes pas connecté.</p>';
+    $content .= '<a href="login.php"><button>Se connecter</button></a>';
+} else {
+    // L'utilisateur est connecté
+    $playerData = $this->model->getPlayerData($playerId);
+    $playerGames = $this->model->getPlayerGames($playerId);
 
-        // Capture le contenu de home.php dans une variable
-        ob_start();
-        include '../Views/home.php';
-        $content = ob_get_clean();
+    // Capture le contenu de home.php dans une variable
+    ob_start();
+    include '../Views/home.php';
+    $content = ob_get_clean();
+}
 
-        // Inclure le layout avec le contenu
-        include '../Views/layout.php';
+// Inclure le layout avec le contenu
+include '../Views/layout.php';
 
 
 
