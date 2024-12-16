@@ -12,5 +12,6 @@ class ConnectionModel extends DBModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
 }
 ?>
