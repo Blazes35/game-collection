@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             if(password_verify($password, $user['password'])){
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-                header('Location: ');
+                header('Location: ../Controllers/HomeController.php');
             }else{
                 echo "<div class= 'errormdp'>Mot de passe incorrect</div>";
             }
