@@ -1,27 +1,22 @@
 <?php
-require_once 'HomeModel.php';
+require_once '../Models/HomeModel.php';
 
-class HomeController {
-    private $model;
+$model = new HomeModel();
 
-    public function __construct($model) {
-        $this->model = $model;
-    }
-
-    public function displayHome($playerId) {
-        $playerData = $this->model->getPlayerData($playerId);
-        $playerGames = $this->model->getPlayerGames($playerId);
+   
+        $playerData = $model->getPlayerData(1);
+        $playerGames = $model->getPlayerGames(1);
 
         // Capture le contenu de home.php dans une variable
         ob_start();
-        include 'home.php';
+        include '../Views/home.php';
         $content = ob_get_clean();
 
         // Inclure le layout avec le contenu
-        include 'layout.php';
-    }
+        include '../Views/layout.php';
 
-    public function handlePostRequest() {
+
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Traitement des données POST
             $playerId = isset($_POST['player_id']) ? (int)$_POST['player_id'] : null;
@@ -32,6 +27,8 @@ class HomeController {
                 echo "ID du joueur non fourni.";
             }
         }
-    }
-}
+
+    displayHome(1);
+
+
 ?>

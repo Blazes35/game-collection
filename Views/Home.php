@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../CSS/Home.css">
 <?php
 // Supposons que les données du joueur et ses jeux soient passés par le contrôleur
 if (isset($playerData) && isset($playerGames)) {
@@ -22,6 +23,7 @@ if (isset($playerData) && isset($playerGames)) {
 } else {
     echo "<p>Vous n'etes pas connécté</p>";}
 ?>
+
 
 <!-- Formulaire pour envoyer une requête POST -->
 <form action="Login.php" method="get">
