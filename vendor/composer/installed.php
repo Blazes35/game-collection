@@ -3,7 +3,7 @@
         'name' => 'guillaumemarcel/game-collection-deploy',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'dd1cbabe4d2a83d4e570eef0e559c45cece34170',
+        'reference' => '9c504d3281a380441581862d2386d23c8c8e1f6e',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'guillaumemarcel/game-collection-deploy' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'dd1cbabe4d2a83d4e570eef0e559c45cece34170',
+            'reference' => '9c504d3281a380441581862d2386d23c8c8e1f6e',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
