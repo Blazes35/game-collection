@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
-        'name' => 'lorid/game-collection',
+        'name' => 'guillaumemarcel/game-collection-deploy',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f2161ee53c8f6d031f5ce91fede6a396c837b8ed',
+        'reference' => 'dd1cbabe4d2a83d4e570eef0e559c45cece34170',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -19,10 +19,10 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'lorid/game-collection' => array(
+        'guillaumemarcel/game-collection-deploy' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f2161ee53c8f6d031f5ce91fede6a396c837b8ed',
+            'reference' => 'dd1cbabe4d2a83d4e570eef0e559c45cece34170',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
