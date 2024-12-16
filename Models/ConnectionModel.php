@@ -1,7 +1,7 @@
 <?php
 
-class ConnectionModel extends Model {
-
+require_once('../Models/DBModel.php');
+class ConnectionModel extends DBModel {
     public function __construct() {
         parent::__construct();
     }
@@ -12,5 +12,6 @@ class ConnectionModel extends Model {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
 }
 ?>
