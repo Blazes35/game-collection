@@ -7,7 +7,7 @@ session_start();
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
 switch ($page) {
     case 'Home':
-        include '';
+        include './views/Home.php';
         break;
     default:
         include './Views/Error404.php';
