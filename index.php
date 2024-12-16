@@ -15,28 +15,26 @@ require 'db.php';
 
 try {
     $pdo = init_database();
-    echo 'Bravo ! Vous avez réussi a déployer votre application !';
+    // routage
+    $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
+    switch ($page) {
+        case 'Home':
+            include './Controllers/HomeController.php';
+            break;
+        case 'WithoutForm':
+            include 'Controllers/AddGameWithoutForm.php';
+            break;
+        case 'SignUp':
+            include './Controllers/SignUpController.php';
+            break;
+            case 'Connection':
+                include './Controllers/ConnectionController.php';
+            break;
+        default:
+            include './Views/Error404.php';
+            break;
+    }
 } catch (PDOException $e) {
     die('Attention ! Erreur de connexion à la base de données : ' . $e->getMessage());
 }
 
-// routage
-/*$page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
-switch ($page) {
-    case 'Home':
-        include './Controllers/HomeController.php';
-        break;
-    case 'WithoutForm':
-        include 'Controllers/AddGameWithoutForm.php';
-        break;
-    case 'SignUp':
-        include './Controllers/SignUpController.php';
-        break;
-        case 'Connection':
-            include './Controllers/ConnectionController.php';
-        break;
-    default:
-        include './Views/Error404.php';
-        break;
-
-}*/
