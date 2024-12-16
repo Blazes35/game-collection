@@ -20,13 +20,10 @@ if (isset($playerData) && isset($playerGames)) {
     }
     echo "</ul>";
 } else {
-    echo "<p>Les données du joueur ne sont pas disponibles.</p>";
-}
+    echo "<p>Vous n'etes pas connécté</p>";}
 ?>
 
 <!-- Formulaire pour envoyer une requête POST -->
-<form method="POST" action="">
-    <label for="player_id">ID du joueur :</label>
-    <input type="text" id="player_id" name="player_id" required>
-    <button type="submit">Envoyer</button>
+<form action="Login.php" method="get">
+    <button type="submit">Retour à la page de connexion</button>
 </form>
