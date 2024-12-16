@@ -17,7 +17,7 @@ try {
     $pdo = init_database();
     echo 'Bravo ! Vous avez réussi a déployer votre application !';
 } catch (PDOException $e) {
-    echo 'Attention ! Erreur de connexion à la base de données : ' . $e->getMessage();
+    die('Attention ! Erreur de connexion à la base de données : ' . $e->getMessage());
 }
 
 // routage
