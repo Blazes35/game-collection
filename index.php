@@ -19,6 +19,9 @@ switch ($page) {
     case 'Home':
         include 'Controllers/HomeController.php';
         break;
+    case 'Form':
+        include 'Controllers/FormController.php';
+        break;
     case 'WithoutForm':
         include 'Controllers/AddGameWithoutForm.php';
         break;
