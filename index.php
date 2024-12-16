@@ -16,7 +16,7 @@ require 'db.php';
 try {
     $pdo = init_database();
     // routage
-    $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
+    $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'WithoutForm';
     switch ($page) {
         case 'Home':
             include 'Controllers/HomeController.php';
