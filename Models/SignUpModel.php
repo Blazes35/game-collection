@@ -1,15 +1,16 @@
 <?php
 require_once('../Models/DBModel.php');
-class SingUpModel extends DBModel {
+class SignUpModel extends DBModel {
     public function __construct() {
         parent::__construct();
     }
     public function insertuser($nom, $prenom, $email, $password) {
-        $stmt = self::$db->prepare("INSERT INTO UTILISATEUR (nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password)");
+        $stmt = self::$db->prepare("INSERT INTO UTILISATEUR (prenom, nom, email, password) VALUES (:nom, :prenom, :email, :password)");
         $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
         $stmt->bindParam(':prenom', $prenom, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        echo 'ok';
         return $stmt->execute();
     }
 

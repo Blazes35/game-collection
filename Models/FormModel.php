@@ -1,5 +1,5 @@
 <?php
-require 'DBModel.php';
+require_once 'DBModel.php';
 require 'FormModel.php';
 
 class FormModel extends DBModel {

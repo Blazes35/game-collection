@@ -1,27 +1,28 @@
 <?php
-require_once 'HomeModel.php';
+require_once '../Models/HomeModel.php';
 
-class HomeController {
-    private $model;
+$model = new HomeModel();
 
-    public function __construct($model) {
-        $this->model = $model;
-    }
+if (!isset($_SESSION['user_id'])) {
+    // L'utilisateur n'est pas connecté
+    $content = '<p>Vous n\'êtes pas connecté.</p>';
+    $content .= '<a href="login.php"><button>Se connecter</button></a>';
+} else {
+    // L'utilisateur est connecté
+    $playerData = $this->model->getPlayerData($playerId);
+    $playerGames = $this->model->getPlayerGames($playerId);
 
-    public function displayHome($playerId) {
-        $playerData = $this->model->getPlayerData($playerId);
-        $playerGames = $this->model->getPlayerGames($playerId);
+    // Capture le contenu de home.php dans une variable
+    ob_start();
+    include '../Views/home.php';
+    $content = ob_get_clean();
+}
 
-        // Capture le contenu de home.php dans une variable
-        ob_start();
-        include 'home.php';
-        $content = ob_get_clean();
+// Inclure le layout avec le contenu
+include '../Views/layout.php';
 
-        // Inclure le layout avec le contenu
-        include 'layout.php';
-    }
 
-    public function handlePostRequest() {
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Traitement des données POST
             $playerId = isset($_POST['player_id']) ? (int)$_POST['player_id'] : null;
@@ -32,6 +33,8 @@ class HomeController {
                 echo "ID du joueur non fourni.";
             }
         }
-    }
-}
+
+    displayHome(1);
+
+
 ?>

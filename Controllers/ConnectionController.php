@@ -1,25 +1,26 @@
 <?php
-require_once('Models/ConnectionManager.php');
+require_once('../Models/ConnectionModel.php');
+$model = new ConnectionModel();
 
-isser($_SERVER['REQUEST_METHOD']=='POST'){
+if($_SERVER['REQUEST_METHOD']=='POST'){
     if(isset($_POST['email']) && isset($_POST['password'])){
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
-        $user = selectemail($email);
+        $user = $model->selectemail($email);
         if($user){
             if(password_verify($password, $user['password'])){
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
-                header('Location: index.php');
+                header('Location: ');
             }else{
-                $error = "Mot de passe incorrect";
+                echo "<div class= 'errormdp'>Mot de passe incorrect</div>";
             }
         }else{
-            $error = "Email incorrect";
+            echo "<div class= 'erroremail'>Email incorrect</div>";
         }
     }
 }
     
 
-require_once('Views/Connection.php');
+require_once('../Views/Connection.php');
 ?>

@@ -11,7 +11,7 @@ class DBModel {
 
     public function connect() {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=gaming_platform', 'root', '');
+            $db = new PDO('mysql:host=localhost;dbname=td21-4', 'root', '');
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             self::$db = $db;
         } catch (PDOException $e) {

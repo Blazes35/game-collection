@@ -1,0 +1,70 @@
+
+/* Conteneur principal */
+.signup {
+    background-color: #2b2b3a; /* Fond plus clair */
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+/* Titre */
+.titre h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Style du formulaire */
+.formulaire form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+input {
+    background-color: #1e1e2d;
+    border: 1px solid #3e3e5e;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7b61ff; /* Couleur d'accentuation */
+}
+
+/* Bouton S'inscrire */
+input[type="submit"] {
+    background-color: #7b61ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a50e8;
+}
+
+/* Lien Se connecter */
+a {
+    color: #7b61ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
