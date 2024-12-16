@@ -9,7 +9,7 @@
 <body>
 <header class="navbar">
         <div class="logo">
-            <a href="./HomeController.php">
+            <a href="?page=HomeController">
                 <span class="game">Game</span><span class="collection">Collection</span>
             </a>
         </div>
@@ -25,7 +25,7 @@
         <?php echo $content; ?>
     </main>
     <footer>
-        <p>Game Collection - 2023 - Tous droits réservés</p>
+        <p>Game Collection - <?php echo date("Y"); ?> - Tous droits réservés</p>
     </footer>
 </body>
 </html>
