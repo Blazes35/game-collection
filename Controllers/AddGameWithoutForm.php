@@ -1,3 +1,3 @@
 <?php
 
-require '../Views/AddGameWithoutForm.php';
+require 'Views/AddGameWithoutForm.php';
