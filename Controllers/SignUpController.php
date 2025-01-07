@@ -13,11 +13,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $confirmpassword = htmlspecialchars($_POST['confirmpassword']);
         var_dump($nom, $prenom, $email, $password, $confirmpassword);
         if ($password == $confirmpassword) {
-            echo $model->selectemail($email);
+            echo 'mdp';
             $user = $model->selectemail($email);
+            var_dump($user);
             if (!$user) {
+                echo 'email';
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $insert = $model->insertuser($nom, $prenom, $email, $password);
+                echo "insert";
                 if ($insert) {
                     header('Location: ?page=Connection');
                     exit();
