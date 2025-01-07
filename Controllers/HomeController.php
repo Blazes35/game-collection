@@ -6,7 +6,7 @@ $model = new HomeModel();
     $playerGames = $model->getPlayerGames($playerId);
 
     $playerId = $_SESSION['id'];
-    var_dump($playerId);
+ 
     
    
 
