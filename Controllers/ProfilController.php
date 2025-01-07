@@ -6,7 +6,9 @@ if(isset($_SESSION['id'])){
     $user = $modele->selectuser($id);
 }
 function getnom(){
+    echo $user['nom'];
     return $user['nom'];
+
 }
 require_once('Views/Profil.php');
 ?>
