@@ -4,6 +4,7 @@ $model = new SignUpModel();
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo $model->select();
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmpassword'])) {
         
         $nom = htmlspecialchars($_POST['nom']);
