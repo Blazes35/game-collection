@@ -21,7 +21,7 @@
                 <label for="confirmpassword">Confirmation du mot de passe :</label>
                 <input type="password" name="confirmpassword" id="confirmpassword" required>
                 <input type="submit" value="S'inscrire">
-                <a href="index.php?action=connection">Se connecter</a>
+                <a href="?page=Connection">Se connecter</a>
             </form>
         </div>
     </div>
