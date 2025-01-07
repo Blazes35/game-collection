@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $confirmpassword = htmlspecialchars($_POST['confirmpassword']);
         var_dump($nom, $prenom, $email, $password, $confirmpassword);
         if ($password == $confirmpassword) {
+            var_dump($model->selectemail($email));
             $user = $model->selectemail($email);
             if (!$user) {
                 $password = password_hash($password, PASSWORD_DEFAULT);
