@@ -5,9 +5,9 @@ class ProfilModel extends DBModel {
         parent::__construct();
     }
 
-    public function selectemail($email) {
-        $stmt = self::$db->prepare("SELECT * FROM utilisateur WHERE email = :email");
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    public function selectuser($id) {
+        $stmt = self::$db->prepare("SELECT * FROM utilisateur WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
