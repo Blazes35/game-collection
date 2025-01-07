@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($password == $confirmpassword) {
             echo 'mdp';
             $user = $model->selectemail($email);
+            var_dump($user);
             if (!$user) {
                 echo 'email';
                 $password = password_hash($password, PASSWORD_DEFAULT);
