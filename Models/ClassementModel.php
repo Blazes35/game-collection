@@ -3,7 +3,7 @@ require_once 'DBModel.php';
 
 class ClassementModel extends DBModel {
     public function getClassement() {
-        $stmt = self::$db->prepare("
+        $stmt = $this->getDB()->prepare("
             SELECT 
                 utilisateur.prenom, 
                 utilisateur.nom, 
