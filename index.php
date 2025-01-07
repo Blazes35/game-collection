@@ -28,9 +28,9 @@ switch ($page) {
     case 'SignUp':
         include 'Controllers/SignUpController.php';
         break;
-        case 'Connection':
-            include 'Controllers/ConnectionController.php';
-        break;
+    case 'Connection':
+        include 'Controllers/ConnectionController.php';
+    break;
     case 'Classement':
         include 'Controllers/ClassementController.php';
         break;
