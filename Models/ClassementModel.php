@@ -11,19 +11,13 @@ class ClassementModel {
                 ROUND(utilisateur_jeu.temps_de_jeu / 60, 2) AS total_heures
             FROM utilisateur
             JOIN utilisateur_jeu 
-                ON utilisateur.id = utilisateur_jeu.id_utilisateur
+                ON utilisateur.id = utilisateur_jeu.id
             JOIN jeu 
-                ON utilisateur_jeu.id_jeu = jeu.id
+                ON utilisateur_jeu.id = jeu.id
             ORDER BY utilisateur_jeu.temps_de_jeu DESC;
         ");
         $stmt->execute();
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        // Débogage
-        var_dump($results);
-        die();
-    
-        return $results;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
