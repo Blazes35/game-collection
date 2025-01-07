@@ -3,8 +3,7 @@ require_once('Models/SignUpModel.php');
 $model = new SignUpModel(); 
 
 
-/*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo 'ok';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmpassword'])) {
         $nom = htmlspecialchars($_POST['nom']);
         $prenom = htmlspecialchars($_POST['prenom']);
@@ -23,7 +22,6 @@ $model = new SignUpModel();
             }
         } 
     }
-}*/
-$model->select();
+}
 require_once('Views/SignUp.php');
 ?>
