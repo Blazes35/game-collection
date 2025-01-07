@@ -9,7 +9,7 @@
 <body>
 <header class="navbar">
         <div class="logo">
-            <a href="?page=HomeController">
+            <a href="?page=Home">
                 <span class="game">Game</span><span class="collection">Collection</span>
             </a>
         </div>

@@ -17,7 +17,7 @@ require '.db.php';
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'WithoutForm';
 switch ($page) {
     case 'Home':
-        include 'Controllers/HomeController.php';
+        include 'Views/Home.php';
         break;
     case 'Form':
         include 'Controllers/FormController.php';
