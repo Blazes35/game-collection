@@ -28,6 +28,9 @@ switch ($page) {
         case 'Connection':
             include 'Controllers/ConnectionController.php';
         break;
+    case 'Classement':
+        include 'Controllers/ClassementController.php';
+        break;
     default:
         include 'Views/Error404.php';
         break;
