@@ -6,7 +6,6 @@
     
 
     <?php 
-    var_dump($classement);  
     if (isset($classement) && !empty($classement)): ?>
         <table>
             <tr>
