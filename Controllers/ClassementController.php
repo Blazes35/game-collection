@@ -10,5 +10,5 @@ function displayClassement() {
     ob_start();
     include '../Views/classement.php';
 }
-displyClassement();
+displayClassement();
 ?>
