@@ -1,5 +1,6 @@
 
         h2 {
+            margin-left: 20px;
             margin-top: 20px;
         }
         table {
@@ -20,7 +21,4 @@
         tr:nth-child(even) {
             background-color: #252836;
             ;
-        }
-        tr:hover {
-            background-color: #ddd;
         }
