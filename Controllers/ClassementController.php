@@ -1,10 +1,7 @@
 <?php
-require_once 'Views/Classement.php';
+require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 
-
-
 $classement = $model->getClassement();
-include '../Views/classement.php';
-
+include 'Views/Classement.php';
 ?>
