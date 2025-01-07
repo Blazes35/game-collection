@@ -41,8 +41,11 @@
 </head>
 <body>
     <h2>Classement des Joueurs</h2>
+    
 
-    <?php if (isset($classement) && !empty($classement)): ?>
+    <?php 
+    var_dump($classement);
+    if (isset($classement) && !empty($classement)): ?>
         <table>
             <tr>
                 <th>Prénom</th>
