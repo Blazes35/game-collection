@@ -17,9 +17,7 @@ class ClassementModel {
             ORDER BY utilisateur_jeu.temps_de_jeu DESC;
         ");
         $stmt->execute();
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        return $results;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

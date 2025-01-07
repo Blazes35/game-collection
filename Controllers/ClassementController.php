@@ -10,8 +10,6 @@ function displayClassement() {
     ob_start();
     include '../Views/classement.php';
     $content = ob_get_clean();
-
-}
-
  include '../Views/layout.php';
+}
 ?>
