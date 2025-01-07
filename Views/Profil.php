@@ -21,3 +21,7 @@ ob_start();
     </div>
 
 </body>
+<?php
+    $content = ob_get_clean();
+    include 'Layout.php';
+?>

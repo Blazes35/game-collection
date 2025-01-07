@@ -33,7 +33,10 @@ switch ($page) {
     break;
     case 'Classement':
         include 'Controllers/ClassementController.php';
-        break;
+    break;
+    case 'Profil':
+        include 'Controllers/ProfilController.php';
+    break;
     default:
         include 'Views/Error404.php';
         break;

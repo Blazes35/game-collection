@@ -16,4 +16,6 @@ function getemail(){
     $user = $model->selectuser($_SESSION['id']);
     return $user['email'];
 }
+
+require_once('Views/Profil.php');
 ?>

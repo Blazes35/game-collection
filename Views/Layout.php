@@ -18,7 +18,7 @@
             <a href="?page=">MA BIBLIOTHÈQUE</a>
             <a href="?page=AddGameWithoutForm">AJOUTER UN JEU</a>
             <a href="?page=Classement">CLASSEMENT</a>
-            <a href="?page=">PROFIL</a>
+            <a href="?page=Profil">PROFIL</a>
         </nav>
     </header>
     <main>
