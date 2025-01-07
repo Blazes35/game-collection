@@ -19,10 +19,6 @@ class ClassementModel {
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-        // Débogage
-        var_dump($results);
-        die();
-    
         return $results;
     }
 }
