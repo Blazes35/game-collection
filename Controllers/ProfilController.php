@@ -1,5 +1,5 @@
 <?php
 require_once('Models/ProfilModel.php');
-$mmodele = new ProfileModel();
+$modele = new ProfilModel();
 require_once('Views/Profil.php');
 ?>
