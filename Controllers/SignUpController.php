@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $confirmpassword = htmlspecialchars($_POST['confirmpassword']);
         if ($password == $confirmpassword) {
             $user = $model->selectemail($email);
-            var_dump($user);
             if (!$user) {
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $insert = $model->insertuser($nom, $prenom, $email, $password);
