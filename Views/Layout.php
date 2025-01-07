@@ -17,8 +17,8 @@
         <nav class="navbar-right">
             <a href="?page=">MA BIBLIOTHÈQUE</a>
             <a href="?page=AddGameWithoutForm">AJOUTER UN JEU</a>
-            <a href="#classement">CLASSEMENT</a>
-            <a href="#profil">PROFIL</a>
+            <a href="?page=Classement">CLASSEMENT</a>
+            <a href="?page=">PROFIL</a>
         </nav>
     </header>
     <main>
