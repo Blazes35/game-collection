@@ -2,7 +2,7 @@
 $Title = "Ajouter un jeu à sa bibliothèque";
 ob_start();
 
-echo $test;
+var_dump($test);
 
 ?>
 
