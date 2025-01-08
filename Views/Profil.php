@@ -17,6 +17,21 @@ ob_start();
         <div class="email">
             <p>Email : <?php echo $user['email']; ?></p>
         </div>
+        <div class="modifier">
+            <button>
+            <a href="?page=ModifierProfil">MODIFIER MON PROFIL</a>
+            </button>
+        </div>
+        <div class="supprimer">
+            <button>
+            <a href="?page=SupprimerProfil">SUPPRIMER MON COMPTE</a>
+            </button>
+        </div>
+        <div class="deconnexion">
+            <button type="submit">
+            DECONNEXION
+            </button>
+        <div>
 
     </div>
 
