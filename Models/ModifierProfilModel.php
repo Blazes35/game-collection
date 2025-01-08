@@ -1,6 +1,6 @@
 <?php
 require_once('Models/DBModel.php');
-class ModifierProdilModel extends DBModel{
+class ModifierProfilModel extends DBModel{
     public function __construct() {
         parent::__construct();
     }
