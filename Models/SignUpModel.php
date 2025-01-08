@@ -5,7 +5,7 @@ class SignUpModel extends DBModel {
         parent::__construct();
     }
     public function insertuser($nom, $prenom, $email, $password) {
-        $stmt = self::$db->prepare("INSERT INTO utilisateur (prenom, nom, email, password) VALUES (:nom, :prenom, :email, :password)");
+        $stmt = self::$db->prepare("INSERT INTO utilisateur (nom, prenom, email, password) VALUES (:nom, :prenom, :email, :password)");
         $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
         $stmt->bindParam(':prenom', $prenom, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
