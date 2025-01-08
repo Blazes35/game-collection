@@ -5,5 +5,19 @@ if(isset($_SESSION['id'])){
     $id = $_SESSION['id'];
     $user = $modele->selectuser($id);
 }
+
+if(isset($_POST['deconnexion'])){
+    session_destroy();
+    header('Location: ?page=Home');
+}
+
+if(isset($_POST['supprimer'])){
+    $stmt = $modele->deleteuser($id);
+    session_destroy();
+    if($stmt){
+        header('Location: ?page=Home');
+    }
+    else echo "La suppression a échoué";
+}
 require_once('Views/Profil.php');
 ?>

@@ -11,6 +11,12 @@ class ProfilModel extends DBModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function deleteuser($id) {
+        $stmt = self::$db->prepare("DELETE FROM utilisateur WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        return $stmt->execute();
+    }
 }
 
 ?>

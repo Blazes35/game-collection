@@ -23,12 +23,12 @@ ob_start();
             </button>
         </div>
         <div class="supprimer">
-            <button>
-            <a href="?page=SupprimerProfil">SUPPRIMER MON COMPTE</a>
+            <button type="submit" name="supprimer">
+            SUPPRIMER MON COMPTE
             </button>
         </div>
         <div class="deconnexion">
-            <button type="submit">
+            <button type="submit" name="deconnexion">
             DECONNEXION
             </button>
         <div>
