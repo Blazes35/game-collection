@@ -9,7 +9,7 @@ ob_start();
             <h1>Mon profil</h1>
         </div>
         <div class="nom">
-            <p>Nom : <?php $user['nom']; ?></p>
+            <p>Nom : <?php echo $user['nom']; ?></p>
         </div>
 
     </div>
