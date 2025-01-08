@@ -10,6 +10,9 @@
 .formulaire form{
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
 }
 
 label{
