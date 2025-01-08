@@ -23,6 +23,19 @@ ob_start();
                 <input type="submit" value="Modifier">
             </form>
         </div>
+        <form method="post">
+            <div class="supprimer">
+                <button type="submit" name="supprimer">
+                SUPPRIMER MON COMPTE
+                </button>
+            </div>
+            <div class="deconnexion">
+                <button type="submit" name="deconnexion">
+                DECONNEXION
+                </button>
+            </div>
+        </form>
+    </div>
 </body>
 
 <?php

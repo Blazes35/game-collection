@@ -27,5 +27,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 }
 
+
+if(isset($_POST['deconnexion'])){
+    session_destroy();
+    header('Location: ?page=Home');
+}
+
+if(isset($_POST['supprimer'])){
+    $stmt = $modele->deleteuser($id);
+    session_destroy();
+    if($stmt){
+        header('Location: ?page=Home');
+    }
+    else echo "La suppression a échoué";
+}
+
 require_once('Views/ModifierProfil.php');
 ?>
