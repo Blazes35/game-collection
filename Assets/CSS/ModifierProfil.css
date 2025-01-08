@@ -1,6 +1,9 @@
+.modifierprofil{
+    margin-left: 10%;
+}
+
 .formulaire{
     display: flex;
-    margin-right: 10%;
     height: 70vh;
 }
 
