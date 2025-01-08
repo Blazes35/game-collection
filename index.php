@@ -37,6 +37,9 @@ switch ($page) {
     case 'Profil':
         include 'Controllers/ProfilController.php';
     break;
+    case 'ModifierProfil':
+        include 'Controllers/ModifierProfilController.php';
+    break;
     default:
         include 'Views/Error404.php';
         break;
