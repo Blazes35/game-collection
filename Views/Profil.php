@@ -11,6 +11,12 @@ ob_start();
         <div class="nom">
             <p>Nom : <?php echo $user['nom']; ?></p>
         </div>
+        <div class="prenom">
+            <p>Prénom : <?php echo $user['prenom']; ?></p>
+        </div>
+        <div class="email">
+            <p>Email : <?php echo $user['email']; ?></p>
+        </div>
 
     </div>
 
