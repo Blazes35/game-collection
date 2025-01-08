@@ -22,16 +22,18 @@ ob_start();
             <a href="?page=ModifierProfil">MODIFIER MON PROFIL</a>
             </button>
         </div>
-        <div class="supprimer">
-            <button type="submit" name="supprimer">
-            SUPPRIMER MON COMPTE
-            </button>
-        </div>
-        <div class="deconnexion">
-            <button type="submit" name="deconnexion">
-            DECONNEXION
-            </button>
-        <div>
+        <form method="post">
+            <div class="supprimer">
+                <button type="submit" name="supprimer">
+                SUPPRIMER MON COMPTE
+                </button>
+            </div>
+            <div class="deconnexion">
+                <button type="submit" name="deconnexion">
+                DECONNEXION
+                </button>
+            </div>
+        </form>
 
     </div>
 
