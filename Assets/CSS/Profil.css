@@ -9,4 +9,17 @@ button{
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #6a50e8;
+}
+
+a{
+    color: #7b61ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
 }
