@@ -1,0 +1,12 @@
+.profil{
+    margin-left: 15%;
+}
+
+button{
+    background-color: #7b61ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
