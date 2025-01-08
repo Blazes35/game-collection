@@ -20,7 +20,7 @@ ob_start();
                 <input type="password" name="password" id="password" required>
                 <label for="confirmpassword">Confirmation du mot de passe :</label>
                 <input type="password" name="confirmpassword" id="confirmpassword" required>
-                <input type="submit" value="Modifier">
+                <input type="submit" value="MODIFIER">
             </form>
         </div>
         <form method="post">
