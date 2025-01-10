@@ -15,10 +15,10 @@
         </div>
         </div>
         <nav class="navbar-right">
-            <a href="?page=">MA BIBLIOTHÈQUE</a>
-            <a href="?page=AddGameWithoutForm">AJOUTER UN JEU</a>
-            <a href="?page=Classement">CLASSEMENT</a>
-            <a href="?page=Profil">PROFIL</a>
+            <a href="/">MA BIBLIOTHÈQUE</a>
+            <a href="/AddGameWithoutForm">AJOUTER UN JEU</a>
+            <a href="/Classement">CLASSEMENT</a>
+            <a href="/Profil">PROFIL</a>
         </nav>
     </header>
     <main>
