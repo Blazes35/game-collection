@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $insert = $model->insertuser($nom, $prenom, $email, $password);
                 if ($insert) {
-                    header('Location: ?page=Connection');
+                    header('Location: /Connection');
                     exit();
                 } 
             }

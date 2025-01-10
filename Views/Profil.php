@@ -19,7 +19,7 @@ ob_start();
         </div>
         <div class="modifier">
             <button>
-            <a href="?page=ModifierProfil">MODIFIER MON PROFIL</a>
+            <a href="https://td21-4.game-collection.ovh/ModifierProfil">MODIFIER MON PROFIL</a>
             </button>
         </div>
         <form method="post">
