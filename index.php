@@ -19,7 +19,7 @@ $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['p
 var_dump($page);
 
 switch ($page) {
-    case '':
+    case 'index.php':
     case 'Home':
         include 'Controllers/HomeController.php';
         break;
