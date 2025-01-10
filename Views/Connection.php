@@ -5,6 +5,7 @@
 <div class="container">
         <div class="form-container">
             <h1>Se connecter à Game Collection</h1>
+            <?php echo $erreur; ?>
             <form action="" method="post">
                 <label for="email">Email :</label>
                 <input type="email" name="email" id="email" required>

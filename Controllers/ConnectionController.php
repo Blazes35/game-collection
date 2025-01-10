@@ -1,6 +1,7 @@
 <?php
 require_once('Models/ConnectionModel.php');
 $model = new ConnectionModel();
+$erreur = "";
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     if(isset($_POST['email']) && isset($_POST['password'])){
@@ -14,10 +15,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $_SESSION['prenom'] = $user['prenom'];
                 header('Location: ?page=Home');
             }else{
-                echo "<div class= 'errormdp'>Mot de passe incorrect</div>";
+                $erreur="<div class= 'errormdp'>Mot de passe incorrect</div>";
             }
         }else{
-            echo "<div class= 'erroremail'>Email incorrect</div>";
+            $erreur="<div class= 'erroremail'>Email incorrect</div>";
         }
     }
 }
