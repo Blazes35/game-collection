@@ -15,11 +15,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $description = htmlspecialchars($_POST['description']);
         $image_url = htmlspecialchars($_POST['image_url']);
         $site_url = htmlspecialchars($_POST['site_url']);
-        $insert = $model->insertGame($nom, $editeur, $date_sortie, $plateforme, $description, $image_url, $site_url);
-        if ($insert) {
-            header('Location : ?page=Connection');
-            exit();
-        }
+        $model->insertGame($nom, $editeur, $date_sortie, $plateforme, $description, $image_url, $site_url);
+        header('Location : ?page=Connection');
+        exit();
+
     }
 }
 
