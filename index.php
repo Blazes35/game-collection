@@ -15,8 +15,10 @@ require '.db.php';
 
 // routage
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : '';
+
 switch ($page) {
     case '':
+    case 'Home':
         include 'Controllers/HomeController.php';
         break;
     case 'Form':
