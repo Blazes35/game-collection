@@ -4,8 +4,8 @@ $model = new FormModel();
 
 var_dump($_POST);
 
-
-$gameList = $model->getGames("");
+$gameName= $_POST['game'] ?? '' ;
+$gameList = $model->getGames($gameName);
 
 $gameDiv = "<div class='container'>";
 foreach ($gameList as $game){
