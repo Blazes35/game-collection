@@ -4,9 +4,9 @@ ob_start();
 ?>
 
 <h1>Ajouter un jeu à sa bibliothèque</h1>
-<form>
+<form ction='/WithoutForm' method='post'>
     <input type="text" name="nom">
-    <button type="submit">Ajouter</button>
+    <button type="submit" name="addGame" >Ajouter</button>
 </form>
  <div class="container">
      <?php echo $gameDiv; ?>
