@@ -6,11 +6,9 @@ $model = new HomeModel();
     $playerGames = $model->getPlayerGames($playerId);
 
     $playerId = $_SESSION['id'];
- 
-    
-   
 
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Traitement des données POST
         $playerId = isset($_POST['player_id']) ? (int)$_POST['player_id'] : null;
 
