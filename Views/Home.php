@@ -27,13 +27,6 @@ if (isset($playerData) && isset($playerGames)) {
 }
 ?>
 
-<!-- Formulaire pour envoyer une requête POST -->
-<form method="POST" action="">
-    <label for="player_id">ID du joueur :</label>
-    <input type="text" id="player_id" name="player_id" required>
-    <button type="submit">Envoyer</button>
-</form>
-
 <?php
   $content = ob_get_clean();
   include 'Layout.php';
