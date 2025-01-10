@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /
+
+# Rediriger les requêtes de URL/EXEMPLE vers index.php?page=EXEMPLE
+RewriteRule ^([^/]+)/?$ index.php?page=$1 [L,QSA]
