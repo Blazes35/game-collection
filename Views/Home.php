@@ -3,7 +3,6 @@
 ?>
 <link rel="stylesheet" href="CSS/Home.css">
 <?php
-  var_dump($playerId);
 if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];
     $games = $playerGames;
@@ -27,13 +26,6 @@ if (isset($playerData) && isset($playerGames)) {
     echo "<p>Les données du joueur ne sont pas disponibles.</p>";
 }
 ?>
-
-<!-- Formulaire pour envoyer une requête POST -->
-<form method="POST" action="">
-    <label for="player_id">ID du joueur :</label>
-    <input type="text" id="player_id" name="player_id" required>
-    <button type="submit">Envoyer</button>
-</form>
 
 <?php
   $content = ob_get_clean();
