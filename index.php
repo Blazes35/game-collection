@@ -15,7 +15,8 @@ require '.db.php';
 
 // routage
 
-    $page = $isset($_POST) && $_POST["page"] != "" ? $_POST["page"]: "Home" ;
+$page = isset($_POST) && $_POST["page"] != "" ? $_POST["page"]: "Home" ;
+
 switch ($page) {
     case 'Home':
         include 'Controllers/HomeController.php';
