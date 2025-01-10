@@ -14,12 +14,11 @@ $dotenv->load();
 require '.db.php';
 
 // routage
-if (isset($_POST["page"])) {
-    $page = $_POST["page"] == "" ? "Home" : $_POST["page"];
-}
+
+    $page = $isset($_POST) && $_POST["page"] != "" ? $_POST["page"]: "Home" ;
 switch ($page) {
     case 'Home':
-        include 'Views/Home.php';
+        include 'Controllers/HomeController.php';
         break;
     case 'Form':
         include 'Controllers/FormController.php';
