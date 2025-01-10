@@ -2,6 +2,8 @@
 require_once('Models/ModifierProfilModel.php');
 $model = new ModifierProfilModel();
 
+$erreur = "";
+
 if(isset($_SESSION['id'])){
     $user = $model->selectuser($_SESSION['id']);
 }
@@ -14,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         
         
         if($_POST['password'] != $_POST['confirmpassword']){
-            echo "<div class= 'errorpassword'>Les mots de passe ne correspondent pas</div>";
+            $erreur="<div class= 'errorpassword'>Les mots de passe ne correspondent pas</div>";
         }else{
             $password = password_hash(htmlspecialchars($_POST['password']), PASSWORD_DEFAULT);
             $model->updateuser($_SESSION['id'], $nom, $prenom, $email, $password);
