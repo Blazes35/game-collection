@@ -35,7 +35,7 @@ switch ($page) {
         include 'Controllers/ClassementController.php';
     break;
     case 'Profil':
-        include 'Controllers/ProfilController.php';
+        isset($_SESSION['id']) ? include 'Controllers/ProfilController.php' : include 'Controllers/ConnectionController.php';
     break;
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
