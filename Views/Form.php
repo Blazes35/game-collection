@@ -1,3 +1,7 @@
+<?php
+$title = "Inscription";
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -47,3 +51,7 @@
     </div>
 </body>
 </html>
+<?php
+$content = ob_get_clean();
+include 'Layout.php';
+?>

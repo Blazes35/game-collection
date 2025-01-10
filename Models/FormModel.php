@@ -1,6 +1,5 @@
 <?php
-require_once 'DBModel.php';
-
+require_once('Models/DBModel.php');
 class FormModel extends DBModel {
 
     public function __construct() {
