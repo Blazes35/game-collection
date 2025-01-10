@@ -9,13 +9,13 @@ class HomeModel extends DBModel {
     }
 
     public function getPlayerGames($playerId) {
-        $stmt = self ::$db->prepare("
+        $stmt = $this->getDB()->prepare("
             SELECT jeu.nom, jeu.image_url, jeu.plateforme, utilisateur_jeu.temps_de_jeu 
             FROM jeu 
-            JOIN utilisateur_jeu ON jeu.id = utilisateur_jeu.id 
-            WHERE utilisateur_jeu.id = jeu.id");
-        $stmt->bindParam(':playerId', $playerId, PDO::PARAM_INT);
-        $stmt->execute();
+            JOIN utilisateur_jeu ON jeu.id = utilisateur_jeu.jeu_id 
+            WHERE utilisateur_jeu.utilisateur_id = ?
+        ");
+        $stmt->execute([$playerId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
