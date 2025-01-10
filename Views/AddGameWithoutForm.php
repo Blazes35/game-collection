@@ -5,7 +5,7 @@ ob_start();
 
 <h1>Ajouter un jeu à sa bibliothèque</h1>
  <div class="container">
-     <?php echo $gameList
+     <?php echo $gameDiv; ?>
  </div>
 
 <?php
