@@ -16,7 +16,7 @@
         </div>
         <nav class="navbar-right">
             <a href="/">MA BIBLIOTHÈQUE</a>
-            <a href="/AddGameWithoutForm">AJOUTER UN JEU</a>
+            <a href="/WithoutForm">AJOUTER UN JEU</a>
             <a href="/Classement">CLASSEMENT</a>
             <a href="/Profil">PROFIL</a>
         </nav>
