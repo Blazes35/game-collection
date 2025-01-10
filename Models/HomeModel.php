@@ -7,7 +7,7 @@ class HomeModel extends DBModel {
         $stmt->execute([$playerId]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
+/*
     public function getPlayerGames($playerId) {
         $stmt = $this->getDB()->prepare("
             SELECT jeu.nom, jeu.image_url, jeu.plateforme, utilisateur_jeu.temps_de_jeu 
@@ -18,5 +18,6 @@ class HomeModel extends DBModel {
         $stmt->execute([$playerId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-}
+
+    */}
 ?>
