@@ -8,6 +8,8 @@ ob_start();
     <input type="text" name="nom">
     <button type="submit" name="addGame" >Ajouter</button>
 </form>
+<p>Le jeu n'existe pas ?</p>
+<button type="submit" name="createGame" onclick="window.location.href='/Form';" >Créer le jeu</button>
  <div class="container">
      <?php echo $gameDiv; ?>
  </div>
