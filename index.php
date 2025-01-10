@@ -14,7 +14,9 @@ $dotenv->load();
 require '.db.php';
 
 // routage
-$page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
+if (isset($_POST["page"])) {
+    $page = $_POST["page"] == "" ? "Home" : $_POST["page"];
+}
 switch ($page) {
     case 'Home':
         include 'Views/Home.php';
