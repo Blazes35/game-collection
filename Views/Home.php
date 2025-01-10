@@ -3,7 +3,6 @@
 ?>
 <link rel="stylesheet" href="CSS/Home.css">
 <?php
-  var_dump($playerId);
 if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];
     $games = $playerGames;
