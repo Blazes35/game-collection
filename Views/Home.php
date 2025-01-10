@@ -3,7 +3,7 @@
 ?>
 <link rel="stylesheet" href="CSS/Home.css">
 <?php
-
+  var_dump($playerId);
 // Supposons que les données du joueur et ses jeux soient passés par le contrôleur
 if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];

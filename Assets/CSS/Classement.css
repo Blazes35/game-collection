@@ -1,27 +1,24 @@
 
         h2 {
-            text-align: center;
+            margin-left: 20px;
             margin-top: 20px;
         }
         table {
             width: 80%;
             margin: 20px auto;
             border-collapse: collapse;
-            background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #ddd;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #211F2A;
+
             color: white;
         }
         tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #ddd;
+            background-color: #252836;
+            ;
         }

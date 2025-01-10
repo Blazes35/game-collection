@@ -1,0 +1,68 @@
+.modifierprofil{
+    margin-left: 10%;
+}
+
+.formulaire{
+    display: flex;
+}
+
+.formulaire form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+}
+
+label{
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+input{
+    background-color: #2B2F40;
+    border: 1px solid #2B2F40;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #7b61ff;
+}
+
+
+input[type="submit"] {
+    background-color: #7b61ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a50e8;
+}
+
+button{
+    font-size: 15px;
+    background-color: #7b61ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover{
+    background-color: #6a50e8;
+}

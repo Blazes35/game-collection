@@ -33,7 +33,13 @@ switch ($page) {
     break;
     case 'Classement':
         include 'Controllers/ClassementController.php';
-        break;
+    break;
+    case 'Profil':
+        isset($_SESSION['id']) ? include 'Controllers/ProfilController.php' : include 'Controllers/ConnectionController.php';
+    break;
+    case 'ModifierProfil':
+        include 'Controllers/ModifierProfilController.php';
+    break;
     default:
         include 'Views/Error404.php';
         break;

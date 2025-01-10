@@ -1,0 +1,26 @@
+.profil{
+    margin-left: 10%;
+}
+
+button{
+    font-size: 15px;
+    background-color: #7b61ff;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover{
+    background-color: #6a50e8;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
