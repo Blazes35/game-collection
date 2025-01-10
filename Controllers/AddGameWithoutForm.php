@@ -6,7 +6,6 @@ $gameDiv = "<div class='container'>";
 
 foreach ($gameList as $game){
     $gameDiv .= "<div class='card' style='width: 18rem;'>
-    <img src='".$game['image_url']."' class='card-img-top' alt='...'>
     <div class='card-body'>
         <h5 class='card-title'>".$game['nom']."</h5>
         <p class='card-text'>".$game['description']."</p>

@@ -14,5 +14,6 @@ $playerGames = $model->getPlayerGames($playerId);
 
 
 
+
 require 'Views/Home.php';
 ?>
