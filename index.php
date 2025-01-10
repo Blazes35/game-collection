@@ -16,8 +16,10 @@ require '.db.php';
 // routage
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : '';
 
+var_dump($page);
+
 switch ($page) {
-    case '':
+    case 'index.php':
     case 'Home':
         include 'Controllers/HomeController.php';
         break;
@@ -46,3 +48,4 @@ switch ($page) {
         include 'Views/Error404.php';
         break;
 }
+
