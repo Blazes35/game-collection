@@ -1,12 +1,11 @@
 <?php
 $Title = "Ajouter un jeu à sa bibliothèque";
 ob_start();
-var_dump($test);
 ?>
 
-
+<h1>Ajouter un jeu à sa bibliothèque</h1>
  <div class="container">
-     <h1>Ajouter un jeu à sa bibliothèque</h1>
+     <?php echo $gameList
  </div>
 
 <?php

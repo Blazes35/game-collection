@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $model->updateuser($_SESSION['id'], $nom, $prenom, $email, $password);
             $_SESSION['email'] = $email;
             $_SESSION['prenom'] = $prenom;
-            header('Location: ?page=Profil');
+            header('Location: /Profil');
         }
         
         

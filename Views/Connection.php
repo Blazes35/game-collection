@@ -15,7 +15,7 @@
                 
                 <button type="submit">SE CONNECTER</button>
             </form>
-            <a href="Controllers/SignUpController.php" class="register-link">S'inscrire</a>
+            <a href="https://td21-4.game-collection.ovh/SignUp" class="register-link">S'inscrire</a>
         </div>
 </body>
 <?php

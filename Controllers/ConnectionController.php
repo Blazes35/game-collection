@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['prenom'] = $user['prenom'];
-                header('Location: ?page=Home');
+                header('Location: /');
             }else{
                 $erreur="<div class= 'errormdp'>Mot de passe incorrect</div>";
             }

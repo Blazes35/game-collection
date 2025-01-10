@@ -1,5 +1,5 @@
 <?php
-  ob_start();  
+ob_start();  
 ?>
 <link rel="stylesheet" href="Assets/CSS/Classement.css">
     <h2>Classement des Joueurs</h2>
@@ -27,6 +27,6 @@
         <p style="text-align: center;">Le classement n'est pas disponible ou la liste est vide.</p>
     <?php endif; ?>
 <?php
-  $content = ob_get_clean();
-  include 'Layout.php';
+$content = ob_get_clean();
+include 'Layout.php';
 ?>
