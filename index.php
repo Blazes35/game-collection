@@ -16,8 +16,6 @@ require '.db.php';
 // routage
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : '';
 
-var_dump($page);
-
 switch ($page) {
     case 'index.php':
     case 'Home':
