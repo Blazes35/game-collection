@@ -13,7 +13,7 @@ class HomeModel extends DBModel {
             SELECT jeu.nom, jeu.image_url, jeu.plateforme, utilisateur_jeu.temps_de_jeu 
             FROM jeu 
             JOIN utilisateur_jeu ON jeu.id = utilisateur_jeu.jeu_id 
-            WHERE utilisateur_jeu.utilisateur_id = ?
+            WHERE utilisateur_jeu.utilisateur_id = jeu.id
         ");
         $stmt->execute([$playerId]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
