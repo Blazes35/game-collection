@@ -17,7 +17,7 @@ require '.db.php';
 $page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
 switch ($page) {
     case 'Home':
-        include 'Views/Home.php';
+        include 'Controllers/HomeController.php';
         break;
     case 'Form':
         include 'Controllers/FormController.php';
@@ -30,16 +30,16 @@ switch ($page) {
         break;
     case 'Connection':
         include 'Controllers/ConnectionController.php';
-    break;
+        break;
     case 'Classement':
         include 'Controllers/ClassementController.php';
-    break;
+        break;
     case 'Profil':
         isset($_SESSION['id']) ? include 'Controllers/ProfilController.php' : include 'Controllers/ConnectionController.php';
-    break;
+        break;
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
-    break;
+        break;
     default:
         include 'Views/Error404.php';
         break;
