@@ -7,8 +7,10 @@ if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];
     $games = $playerGames;
 
-    echo "<h2>Bonjour, $playerName !</h2>";
-    echo "<h3>Voici vos jeux :</h3>";?>
+    echo "<div class='home-header'>";
+    echo "<h2 class='Bonjour'>Bonjour, $playerName !</h2>";
+    echo "<h3 class='Vos-jeux'>Voici vos jeux :</h3>";
+    echo "</div>"?>
     <div class="game-list">
     <?php foreach ($games as $game): ?>
         <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
