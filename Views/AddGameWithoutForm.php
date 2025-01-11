@@ -6,7 +6,7 @@ ob_start();
 
 <h1>Ajouter un jeu à sa bibliothèque</h1>
 <form ction='/WithoutForm' method='post' class="add-game-form">
-    <input type="text" name="nom" class='input-field' placeholder="Rechercher un jeu" required>
+    <input type="text" name="nom" class='input-field' placeholder="Rechercher un jeu">
     <button type="submit" name="game" class='btn' >RECHERCHER</button>
 </form>
 <div class="ExistePas">
