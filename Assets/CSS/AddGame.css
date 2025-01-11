@@ -39,3 +39,19 @@
     color: #ccc;
     margin-bottom: 1rem;
 }
+
+.btn {
+    background-color: #6a5acd; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 1rem; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.btn:hover {
+    background-color: #5a4cad; /* Couleur de fond au survol */
+}
