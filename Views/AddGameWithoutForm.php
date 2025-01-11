@@ -19,12 +19,13 @@ ob_start();
                     <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
                     <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
                 </div>
-            </div>
+            
             <form action='/WithoutForm' method='post'>
                 <input type='hidden' name='page' value='Form'>
                 <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['id']) ?>'>
                 <button type='submit'>Ajouter à ma bibliothèque</button>
             </form>
+        </div>
         <?php endforeach; ?>
     
 
