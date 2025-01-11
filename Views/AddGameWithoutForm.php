@@ -11,7 +11,7 @@ ob_start();
 </form>
 <div class="ExistePas">
     <p>Le jeu n'existe pas ?</p>
-    <button type="submit" name="createGame" onclick="window.location.href='/Form';" >Créer le jeu</button>
+    <button type="submit" name="createGame" class="btn" onclick="window.location.href='/Form';" >Créer le jeu</button>
 </div>
 <div class="game-list">
         <?php foreach ($games as $game): ?>
