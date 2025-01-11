@@ -10,7 +10,7 @@ $playerId = $_SESSION['id'];
 
 $model = new HomeModel();
 $playerData = $model->getPlayerData($playerId);
-//$playerGames = $model->getPlayerGames($playerId);
+$playerGames = $model->getPlayerGames($playerId);
 
 
 
