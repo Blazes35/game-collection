@@ -10,7 +10,7 @@ if (isset($playerData) && isset($playerGames)) {
     echo "<div class='home-header'>";
     echo "<h2 class='Bonjour'>SALUT  $playerName !</h2>";
     echo "<h2 class='Bonjour'>PRÊT À AJOUTER DES JEUX À TA COLLECTION ?</h2>";
-    echo "<h3 class='Vos-jeux'>Voici vos jeux :</h3>";
+    echo "<h3 class='Vos-jeux'>VOICI VOS JEUX :</h3>";
     echo "</div>"?>
     <div class="game-list">
     <?php foreach ($games as $game): ?>
