@@ -1,3 +1,24 @@
+.add-game-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 .game-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -22,7 +43,7 @@
 .card-body {
     padding: 1rem;
     text-align: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 50%, rgba(0, 0, 0, 0) 100%);    position: absolute;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0) 100%);    position: absolute;
     bottom: 0;
     width: 100%;
 }
