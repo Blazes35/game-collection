@@ -1,5 +1,6 @@
 .home-header{
     background-image: url(/Assets/Images/fondheader.jpg);
+    padding: 50px;
     background-size: cover;
     background-position: center;
 }
