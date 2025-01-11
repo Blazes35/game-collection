@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
 
-
 h1 {
     margin-bottom: 10px;
 }
@@ -11,8 +10,7 @@ p {
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    max-width: 1000px;
     padding: 20px;
     border-radius: 8px;
 }
@@ -25,6 +23,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    border: #2B2F40;
 }
 
 input[type="text"],
@@ -33,9 +32,8 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    background: #2b2b2b;
-    border: 1px solid #444;
-    border-radius: 4px;
+    background: #2B2F40;
+    border-radius: 5px;
     color: #ddd;
 }
 

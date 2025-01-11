@@ -1,6 +1,6 @@
 .game-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -22,7 +22,7 @@
 .card-body {
     padding: 1rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajoutez un fond semi-transparent pour le texte */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -38,4 +38,20 @@
     font-size: 0.9rem;
     color: #ccc;
     margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #6a5acd; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 1rem; /* Taille de la police */
+    font-family: Arial, sans-serif; /* Police */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.btn:hover {
+    background-color: #5a4cad; /* Couleur de fond au survol */
 }
