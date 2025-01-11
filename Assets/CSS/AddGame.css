@@ -22,7 +22,7 @@
 .card-body {
     padding: 1rem;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajoutez un fond semi-transparent pour le texte */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     position: absolute;
     bottom: 0;
     width: 100%;
