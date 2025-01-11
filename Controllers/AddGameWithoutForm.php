@@ -13,12 +13,7 @@ foreach ($gameList as $game){
     <div class='card-body'>
         <h5 class='card-title'>".$game['nom']."</h5>
         <p class='card-text'>".$game['description']."</p>
-        <img src='".$game['image_url']."'>
-        <form action='/WithoutForm' method='post'>
-            <input type='hidden' name='page' value='Form'>
-            <input type='hidden' name='game' value='".$game['nom']."'>
-            <button type='submit'>Ajouter à ma bibliothèque</button>
-        </form>
+        <img src='".$game['image_url']."'>  
     </div>
   </div>";
 

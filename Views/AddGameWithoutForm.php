@@ -21,8 +21,13 @@ ob_start();
                 </div>
             </div>
         <?php endforeach; ?>
-    </div> 
-
+    
+    <form action='/WithoutForm' method='post'>
+            <input type='hidden' name='page' value='Form'>
+            <input type='hidden' name='game' value='".$game['nom']."'>
+            <button type='submit'>Ajouter à ma bibliothèque</button>
+    </form> 
+</div>
 <div class="container">
      <?php echo $gameDiv; ?>
  </div>
