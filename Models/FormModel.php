@@ -43,13 +43,12 @@ class FormModel extends DBModel {
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }else {
-                  $query = "SELECT * FROM jeu WHERE LOWER(nom) LIKE LOWER(:game)";
-        $stmt = self::$db->prepare($query);
-        $game = "%" . $game . "%";
-        $stmt->bindParam(':game', $game);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+            $query = "SELECT * FROM jeu WHERE LOWER(nom) LIKE LOWER(:game)";
+            $stmt = self::$db->prepare($query);
+            $game = "%" . $game . "%";
+            $stmt->bindParam(':game', $game);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
     }
