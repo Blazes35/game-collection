@@ -34,7 +34,7 @@ class FormModel extends DBModel {
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }else {
-            $query = "SELECT * FROM jeu WHERE nom LIKE :game";
+            $query = "SELECT * FROM jeu WHERE nom LIKE %:game%";
             $stmt = $this->getDB()->prepare($query);
             $stmt->bindParam(':game', $game);
             $stmt->execute();
