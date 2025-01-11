@@ -24,13 +24,11 @@ ob_start();
     
     <form action='/WithoutForm' method='post'>
             <input type='hidden' name='page' value='Form'>
-            <input type='hidden' name='game' value='".$game['nom']."'>
+            <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['jeu_id']) ?>'>
             <button type='submit'>Ajouter à ma bibliothèque</button>
     </form> 
 </div>
-<div class="container">
-     <?php echo $gameDiv; ?>
- </div>
+
 
 <?php
 $content = ob_get_clean();
