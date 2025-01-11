@@ -8,21 +8,27 @@ if (isset($playerData) && isset($playerGames)) {
     $games = $playerGames;
 
     echo "<h2>Bonjour, $playerName !</h2>";
-    echo "<h3>Voici vos jeux :</h3>";
-    echo "<div class='game-list'>";
-    foreach ($games as $game) {
-        $gameName = $game['nom'];
-        $gameImage = $game['image_url'];
-        $gamePlatform = $game['plateforme'];
-        $gameHours = round($game['temps_de_jeu'] / 60, 2); // Convertir les minutes en heures
-
-        echo "<div class='card' style='background-image: url($gameImage);'>";
-          echo "<strong>$gameName</strong> sur $gamePlatform - $gameHours heures de jeu";
-        echo "</div>";
-    }
-    echo "</div>";
+    echo "<h3>Voici vos jeux :</h3>";?>
+    <div class="game-list">
+    <?php foreach ($games as $game): ?>
+        <div class="card" style="background-image: url('<?= htmlspecialchars($game['image_url']) ?>');">
+            <div class="card-body">
+                <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
+                <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
+                <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
+                <p class="card-text"><?= round($game['temps_de_jeu'] / 60, 2) ?> heures de jeu</p>
+                <form action='/WithoutForm' method='post'>
+                    <input type='hidden' name='page' value='Form'>
+                    <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['id']) ?>'>
+                    <button type='submit' class='btn'>Ajouter à ma bibliothèque</button>
+                </form>
+            </div>
+        </div>
+    <?php endforeach;?>
+</div>
+<?php
 } else {
-    echo "<p>Les données du joueur ne sont pas disponibles.</p>";
+  echo "<p>Les données du joueur ne sont pas disponibles.</p>";
 }
 ?>
 
