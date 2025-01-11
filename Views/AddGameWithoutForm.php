@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/Assets/CSS/AddGameWithoutForm.css"> </link>
+<link rel="stylesheet" href="/Assets/CSS/AddGame.css"> </link>
 <?php
 $Title = "Ajouter un jeu à sa bibliothèque";
 ob_start();
