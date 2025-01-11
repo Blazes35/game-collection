@@ -11,7 +11,7 @@ if (isset($playerData) && isset($playerGames)) {
     echo "<h3>Voici vos jeux :</h3>";?>
     <div class="game-list">
     <?php foreach ($games as $game): ?>
-        <div class="card" style="background-image: url('<?= htmlspecialchars($game['image_url']) ?>');">
+        <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
             <div class="card-body">
                 <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
                 <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
