@@ -11,7 +11,19 @@ ob_start();
 </form>
 <p>Le jeu n'existe pas ?</p>
 <button type="submit" name="createGame" onclick="window.location.href='/Form';" >Créer le jeu</button>
- <div class="container">
+<div class="game-list">
+        <?php foreach ($games as $game): ?>
+            <div class="card" style="background-image: url('<?= htmlspecialchars($game['image_url']) ?>');">
+                <div class="card-body">
+                    <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
+                    <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
+                    <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div> 
+
+<div class="container">
      <?php echo $gameDiv; ?>
  </div>
 
