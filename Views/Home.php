@@ -1,7 +1,7 @@
 <?php
   ob_start();  
 ?>
-<link rel="stylesheet" href="CSS/Home.css">
+<link rel="stylesheet" href="/Assets/CSS/Home.css">
 <?php
 if (isset($playerData) && isset($playerGames)) {
     $playerName = $playerData['prenom'] . ' ' . $playerData['nom'];
@@ -17,8 +17,7 @@ if (isset($playerData) && isset($playerGames)) {
         $gameHours = round($game['temps_de_jeu'] / 60, 2); // Convertir les minutes en heures
 
         echo "<div class='card' style='background-image: url($gameImage);'>";
-        echo "<img src='$gameImage' alt='$gameName' style='width:100px;height:100px;'>";
-        echo "<strong>$gameName</strong> sur $gamePlatform - $gameHours heures de jeu";
+          echo "<strong>$gameName</strong> sur $gamePlatform - $gameHours heures de jeu";
         echo "</div>";
     }
     echo "</div>";
