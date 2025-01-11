@@ -9,8 +9,10 @@ ob_start();
     <input type="text" name="nom" class='input-field' placeholder="Rechercher un jeu" required>
     <button type="submit" name="game" class='btn' >RECHERCHER</button>
 </form>
-<p>Le jeu n'existe pas ?</p>
-<button type="submit" name="createGame" onclick="window.location.href='/Form';" >Créer le jeu</button>
+<div class="ExistePas">
+    <p>Le jeu n'existe pas ?</p>
+    <button type="submit" name="createGame" class="btn" onclick="window.location.href='/Form';" >Créer le jeu</button>
+</div>
 <div class="game-list">
         <?php foreach ($games as $game): ?>
             <div class="card" style="background-image: url('<?=$game['image_url']?>');">

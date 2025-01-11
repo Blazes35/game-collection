@@ -1,3 +1,7 @@
+h1 {
+    padding: 20px;
+}
+
 .add-game-form {
     padding: 20px;
     display: flex;
@@ -13,6 +17,10 @@
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+.ExistePas{
+    padding: 20px;
 }
 
 .game-list {
