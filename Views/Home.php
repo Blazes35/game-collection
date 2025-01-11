@@ -17,11 +17,6 @@ if (isset($playerData) && isset($playerGames)) {
                 <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
                 <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
                 <p class="card-text"><?= round($game['temps_de_jeu'] / 60, 2) ?> heures de jeu</p>
-                <form action='/WithoutForm' method='post'>
-                    <input type='hidden' name='page' value='Form'>
-                    <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['id']) ?>'>
-                    <button type='submit' class='btn'>Ajouter à ma bibliothèque</button>
-                </form>
             </div>
         </div>
     <?php endforeach;?>
