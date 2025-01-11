@@ -7,7 +7,7 @@ ob_start();
 <h1>Ajouter un jeu à sa bibliothèque</h1>
 <form ction='/WithoutForm' method='post'>
     <input type="text" name="nom">
-    <button type="submit" name="addGame" >Ajouter</button>
+    <button type="submit" name="game" >Ajouter</button>
 </form>
 <p>Le jeu n'existe pas ?</p>
 <button type="submit" name="createGame" onclick="window.location.href='/Form';" >Créer le jeu</button>
