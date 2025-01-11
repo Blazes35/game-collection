@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $gameName= $_POST['game'] ?? '' ;
-$gameList = $model->getGames($gameName);
+$games = $model->getGames($gameName);
 
 
 require 'Views/AddGameWithoutForm.php';
