@@ -2,7 +2,7 @@
 require_once 'Models/FormModel.php';
 $model = new FormModel();
 
-var_dump($_POST);
+/*var_dump($_POST);*/
 
 $gameName= $_POST['game'] ?? '' ;
 $gameList = $model->getGames($gameName);
