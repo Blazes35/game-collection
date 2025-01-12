@@ -25,7 +25,7 @@ switch ($page) {
         include 'Controllers/FormController.php';
         break;
     case 'WithoutForm':
-        include 'Controllers/AddGameWithoutForm.php';
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/AddGameWithoutForm.php';
         break;
     case 'SignUp':
         include 'Controllers/SignUpController.php';
@@ -37,13 +37,13 @@ switch ($page) {
         include 'Controllers/ClassementController.php';
         break;
     case 'Profil':
-        isset($_SESSION['id']) ? include 'Controllers/ProfilController.php' : include 'Controllers/ConnectionController.php';
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/ProfilController.php';
         break;
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
         break;
     case 'GameDetail':
-        include 'Controllers/GameDetailController.php';
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/GameDetailController.php';
         break;
     default:
         include 'Views/Error404.php';
