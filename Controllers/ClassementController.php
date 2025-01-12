@@ -1,5 +1,4 @@
 <?php
-echo "ok";
 require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 $compte=0;
@@ -24,7 +23,7 @@ function jeuLePlusJoue($joueurId) {
     arsort($jeux);
     return key($jeux);
 }
-
+echo 'ok';
 $topJoueurs = [];
 $classement = $model->getClassement();
 foreach ($classement as $joueur) {
