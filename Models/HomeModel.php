@@ -10,7 +10,7 @@ class HomeModel extends DBModel {
 
     public function getPlayerGames($playerId) {
         $stmt = self::$db->prepare("
-            SELECT jeu.nom, jeu.image_url, jeu.plateforme, utilisateur_jeu.temps_de_jeu 
+            SELECT jeu.nom, jeu.image_url, jeu.plateforme, jeu.description, jeu.editeur, jeu.date_sortie, utilisateur_jeu.temps_de_jeu 
             FROM jeu 
             JOIN utilisateur_jeu ON jeu.id = utilisateur_jeu.jeu_id
             WHERE utilisateur_jeu.utilisateur_id = :playerId");
