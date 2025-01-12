@@ -15,5 +15,5 @@ $playerGames = $model->getPlayerGames($playerId);
 
 
 
-require 'Views/Bibliotheque.php.php';
+require 'Views/Bibliotheque.php';
 ?>
