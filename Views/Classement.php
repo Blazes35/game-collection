@@ -20,8 +20,8 @@ ob_start();
                     <tr>
                         <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
-                        <td><?php echo htmlspecialchars($joueur->getTempsDeJeu()); ?></td>
-                        <td><?php echo htmlspecialchars($joueur->getJeuFavori()); ?></td>
+                        <td>rien</td>
+                        <td>rien ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
