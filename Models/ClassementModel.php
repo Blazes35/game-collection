@@ -8,7 +8,7 @@ class ClassementModel extends DBModel {
                 utilisateur.prenom, 
                 utilisateur.nom, 
                 jeu.nom AS nom_jeu, 
-                ROUND(utilisateur_jeu.temps_de_jeu / 60, 2) AS total_heures
+                temps_de_jeu
             FROM utilisateur
             JOIN utilisateur_jeu 
                 ON utilisateur.id = utilisateur_jeu.id
