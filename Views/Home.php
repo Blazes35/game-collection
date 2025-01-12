@@ -15,17 +15,15 @@ if (isset($playerData) && isset($playerGames)) {
     <div class="game-list">
     <?php foreach ($games as $game): ?>
         <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
-            <form action='/GameDetail' method='post'>
+            <form action='/GameDetail' method='post' class="card-body">
                 <input type='hidden' name='gameId' value='<?= htmlspecialchars($game['id']) ?>'>
                 <button type='submit' class='btn'>
-                     <div class="card-body">
-                        <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
-                        <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
-                        <p class="card-text">Plateform : <?= htmlspecialchars($game['plateforme']) ?></p>
-                        <p class="card-text">Editeur : <?= htmlspecialchars($game['editeur']) ?></p>
-                        <p class="card-text">Date de sortie : <?= htmlspecialchars($game['date_sortie']) ?></p>
-                        <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures</p>
-                    </div>
+                    <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
+                    <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
+                    <p class="card-text">Plateform : <?= htmlspecialchars($game['plateforme']) ?></p>
+                    <p class="card-text">Editeur : <?= htmlspecialchars($game['editeur']) ?></p>
+                    <p class="card-text">Date de sortie : <?= htmlspecialchars($game['date_sortie']) ?></p>
+                    <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures</p>
                 </button>
             </form>
         </div>
