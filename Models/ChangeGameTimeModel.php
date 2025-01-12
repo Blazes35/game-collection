@@ -22,4 +22,12 @@ class ChangeGameTimeModel extends DBModel{
         $stmt->bindParam(':jeu_id', $gameId);
         $stmt->execute();
     }
+
+    public function deleteGame($userId, $gameId){
+        $query = "DELETE FROM utilisateur_jeu WHERE utilisateur_id = :utilisateur_id AND jeu_id = :jeu_id";
+        $stmt = self::$db->prepare($query);
+        $stmt->bindParam(':utilisateur_id', $userId);
+        $stmt->bindParam(':jeu_id', $gameId);
+        $stmt->execute();
+    }
 }
