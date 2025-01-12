@@ -9,7 +9,7 @@ ob_start();
 <div class="card" style="background-image: url('<?=$gameImage?>');">
 </div>
 <form action='/GameDetail' method='post' class="add-game-form">
-    <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu" required min="0">
+    <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu" required min="0" max="2147483646">
     <input type="hidden" name="gameId" value="<?=$gameId?>">
     <button type="submit" class='btn' >Valider</button>
 </form>
