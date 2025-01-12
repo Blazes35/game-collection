@@ -12,20 +12,21 @@ function cumulerTempsDeJeu($model,$joueurId) {
 }
 function jeuLePlusJoue($model,$joueurId) {
     echo 'jeuLePlusJoue debut';
-    $nom='';
+    $jeuFavori='';
     $tempsDeJeu = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
         if ($partie['temps_de_jeu'] > $tempsDeJeu) {
             $tempsDeJeu = $partie['temps_de_jeu'];
-            $nom = $partie['nom'];
+            $jeuFavori = $partie['nom'];
         }
     }
     echo 'jeuLePlusJoue fin';
-    return $nom;
+    return $jeuFavori;
 }
 $topJoueurs = [];
 $classement = $model->getClassement();
+echo 'classement';
 var_dump($classement);
 foreach ($classement as $joueur) {
     $joueurId = $joueur['id'];
