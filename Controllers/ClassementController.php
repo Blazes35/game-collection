@@ -33,6 +33,7 @@ foreach ($classement as $joueur) {
     $nom = $joueur['nom'];
     $prenom = $joueur['prenom'];
     $tempsDeJeu = cumulerTempsDeJeu($model,$joueurId);
+    echo'cumulerTempsDeJeu';
     var_dump($tempsDeJeu);
     $jeuFavori = jeuLePlusJoue($model,$joueurId);
     var_dump($jeuFavori);
