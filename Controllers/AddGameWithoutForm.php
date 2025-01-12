@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $model->insertUserGame($_SESSION['id'], $_POST['addGame']);
         $_SESSION['gameId'] = $_POST['addGame'];
         header('Location: /GameDetail');
+        exit();
     }
 }
 
