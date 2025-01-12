@@ -11,7 +11,6 @@ function cumulerTempsDeJeu($model,$joueurId) {
     return $tempsTotal;
 }
 function jeuLePlusJoue($model,$joueurId) {
-    echo 'jeuLePlusJoue debut';
     $jeux = [];
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
@@ -21,8 +20,8 @@ function jeuLePlusJoue($model,$joueurId) {
         }
         $jeux[$jeuId] += $partie['temps_de_jeu'];
     }
+    var_dump($jeux);
     arsort($jeux);
-    echo 'jeuLePlusJoue fin';
     return key($jeux);
 }
 $topJoueurs = [];
@@ -46,6 +45,5 @@ foreach ($classement as $joueur) {
         return $b['temps_de_jeu'] - $a['temps_de_jeu'];
     });
 }
-var_dump($topJoueurs);
 include 'Views/Classement.php';
 ?>
