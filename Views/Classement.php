@@ -17,13 +17,14 @@ ob_start();
             </thead>
             <tbody>
                 <?php foreach (array_slice($topJoueurs, 0, 20) as $joueur): ?>
-                    <?php if ($joueur['temps_de_jeu'] != 0) continue; ?>
+                    <?php if (!$joueur['temps_de_jeu'] == 0) { ?>
                     <tr>
                         <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['temps_de_jeu']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['jeu_favori']); ?></td>
                     </tr>
+                    <?php } ?>
                 <?php endforeach; ?>
             </tbody>
         </table>
