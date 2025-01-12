@@ -1,4 +1,5 @@
 <?php
+echo "ok";
 require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 $compte=0;
