@@ -4,7 +4,7 @@ $Title = "Changer la durée de jeu";
 ob_start();
 ?>
 
-<h1>Changer durée de jeu</h1>
+<h1>Changer la durée de jeu</h1>
 <div class="card" style="background-image: url('<?=$gameImage?>');">
     <div class="card-body">
         <h3 class="card-title"><?php echo $gameName ?></h3>
