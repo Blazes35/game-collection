@@ -16,7 +16,8 @@ ob_start();
             </tr>
             <?php foreach ($classement as $joueur): ?>
                 <tr>
-                    <td><?php echo augemnterCompte()?></td>
+                    <?php $compte++; ?>
+                    <td><?php echo $compte?></td>
                     <td><?php echo htmlspecialchars($joueur['prenom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom_jeu']) ?></td>
