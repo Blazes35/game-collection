@@ -1,6 +1,6 @@
 <?php
-require_once 'Models/GameDetailModel.php';
-$model = new GameDetailModel();
+require_once 'Models/ChangeGameTimeModel.php';
+$model = new ChangeGameTimeModel();
 
 $gameId = $_SESSION['gameId'];
 $game = $model->getGame($gameId);
@@ -15,5 +15,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 }
 
-require 'Views/GameDetailView.php';
+require 'Views/ChangeGameTimeView.php';
 ?>

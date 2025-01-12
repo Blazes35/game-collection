@@ -42,8 +42,8 @@ switch ($page) {
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
         break;
-    case 'GameDetail':
-        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/GameDetailController.php';
+    case 'ChangeGameTime':
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/ChangeGameTimeController.php';
         break;
     default:
         include 'Views/Error404.php';
