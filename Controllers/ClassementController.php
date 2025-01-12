@@ -10,7 +10,7 @@ function cumulerTempsDeJeu($model,$joueurId) {
     }
     $heures = floor($tempsTotal / 60);
     $minutes = $tempsTotal % 60;
-    $tempsTotal = sprintf('%d heures %d minutes', $heures, $minutes);
+    $tempsTotal = sprintf('%d h %d', $heures, $minutes);
     return $tempsTotal;
 }
 function jeuLePlusJoue($model,$joueurId) {
