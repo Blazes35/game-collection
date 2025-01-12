@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/Assets/CSS/GameDetail.css"> </link>
 <?php
-$Title = "Changer durée de jeu";
+$Title = "Changer la durée de jeu";
 ob_start();
 ?>
 
@@ -17,6 +17,7 @@ ob_start();
         </form>
     </div>
 </div>
+
 <?php
 $content = ob_get_clean();
 include 'Layout.php';

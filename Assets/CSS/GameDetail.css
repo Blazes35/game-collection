@@ -8,6 +8,8 @@ h1 {
     gap: 20px;
     border-radius: 10px;
     max-width: 400px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .input-field {
