@@ -25,7 +25,10 @@ ob_start();
                         <?php 
                         $heures = floor($joueur['temps_de_jeu'] / 60);
                         $minutes = $joueur['temps_de_jeu'] % 60;
-                        echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));
+                        if ($heures != 0){
+                            echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));
+                        }
+                        
                         ?>
                     </td>
                 </tr>
