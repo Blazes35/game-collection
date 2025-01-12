@@ -4,7 +4,7 @@ $Title = "Changer durée de jeu";
 ob_start();
 ?>
 
-<?php echo $_POST['game'] ?>
+<?php echo $_SESSION['gameId'] ?>
 
 <?php
 $content = ob_get_clean();
