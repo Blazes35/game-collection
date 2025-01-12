@@ -19,7 +19,7 @@ ob_start();
                     <td><?= htmlspecialchars($joueur['prenom']) ?></td>
                     <td><?= htmlspecialchars($joueur['nom']) ?></td>
                     <td><?= htmlspecialchars($joueur['nom_jeu']) ?></td>
-                    <td><?= htmlspecialchars($joueur['total_heures']) ?></td>
+                    <td><?= htmlspecialchars($joueur['temps_de_jeu']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </table>
