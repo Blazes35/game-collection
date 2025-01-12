@@ -1,7 +1,7 @@
 <?php
 require_once ('Models/DBModel.php');
 
-class ChangeGameTimeModel extends DBModel{
+class GameDetailModel extends DBModel{
     public function __construct(){
         parent::__construct();
     }
