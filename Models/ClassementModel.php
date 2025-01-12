@@ -4,7 +4,7 @@ require_once 'DBModel.php';
 class ClassementModel extends DBModel {
     public function getClassement() {
         $stmt = $this->getDB()->prepare("
-            SELECT utilisateur.nom,prenom,jeu.nom AS nom_jeu, temps_de_jeu 
+            SELECT utilisateur.id, utilisateur.nom,prenom,jeu.nom AS nom_jeu, temps_de_jeu 
             FROM `utilisateur_jeu` JOIN utilisateur ON utilisateur_jeu.utilisateur_id=utilisateur.id JOIN jeu ON utilisateur_jeu.jeu_id=jeu.id 
             ORDER BY temps_de_jeu DESC;
         ");
