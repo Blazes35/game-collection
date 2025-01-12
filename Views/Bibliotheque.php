@@ -15,8 +15,12 @@ if (isset($playerData) && isset($playerGames)) {
     <div class="game-list">
     <?php for
         ($i = 0; $i < 4; $i++):
-          $game = $games[$i];?>
-        <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
+          $game = $games[$i]; ?>
+        <form id="postForm" action="/GameDetail" method="post" style="display:none;">
+            <input type="hidden" name="gameId" value="<?=$game['id']?>">
+        </form>
+        <a href="#" onclick="document.getElementById('postForm').submit(); return false;">
+             <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
              <div class="card-body">
                 <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
                 <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
@@ -26,6 +30,7 @@ if (isset($playerData) && isset($playerGames)) {
                 <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures</p>
             </div>
         </div>
+        </a>
     <?php endfor;?>
 </div>
 <?php

@@ -45,6 +45,8 @@ switch ($page) {
     case 'GameDetail':
         !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/GameDetailController.php';
         break;
+    case 'Blibliotheque' :
+        include 'Controllers/BibliothequeController.php';
     default:
         include 'Views/Error404.php';
         break;
