@@ -8,12 +8,12 @@ ob_start();
 <h3 class="card-title"><?php echo $gameName ?></h3>
 <div class="card" style="background-image: url('<?=$gameImage?>');">
 </div>
-<form action='/ChangeDetail' method='post' class="add-game-form">
+<form action='/GameDetail' method='post' class="add-game-form">
     <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu">
     <input type="hidden" name="gameId" value="<?=$gameId?>">
     <button type="submit" class='btn' >Valider</button>
 </form>
-<form action='/ChangeDetail' method="post" class="add-game-form">
+<form action='/GameDetail' method="post" class="add-game-form">
     <input type="hidden" name="gameId" value="<?=$gameId?>">
     <button type="submit" name='delete' class='btn'>Supprimer</button>
 </form>
