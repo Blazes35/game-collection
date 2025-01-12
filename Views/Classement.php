@@ -5,7 +5,7 @@ ob_start();
     <h2>Classement des Joueurs</h2>
 
     <?php 
-    if (isset($classement) && !empty($classement)): ?>
+    if (!empty($topJoueurs)): ?>
         <table>
             <thead>
                 <tr>
