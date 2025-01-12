@@ -18,7 +18,7 @@ if (isset($playerData) && isset($playerGames)) {
         <form id="<?=$game['id']?>" action="/GameDetail" method="post" style="display:none;">
             <input type="hidden" name="gameId" value="<?=$game['id']?>">
         </form>
-        <a href="#" onclick="document.getElementById('<?=$game['id']>').submit(); return false;">
+        <a href="#" onclick="document.getElementById('<?=$game['id']?>').submit(); return false;">
              <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
              <div class="card-body">
                 <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
