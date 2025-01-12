@@ -11,7 +11,6 @@ function cumulerTempsDeJeu($model,$joueurId) {
     return $tempsTotal;
 }
 function jeuLePlusJoue($model,$joueurId) {
-    echo 'jeuLePlusJoue debut';
     $jeuFavori='';
     $tempsDeJeu = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
@@ -21,7 +20,6 @@ function jeuLePlusJoue($model,$joueurId) {
             $jeuFavori = $partie['nom'];
         }
     }
-    echo 'jeuLePlusJoue fin';
     return $jeuFavori;
 }
 $topJoueurs = [];
