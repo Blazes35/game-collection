@@ -4,7 +4,6 @@ $model = new GameDetailModel();
 
 $gameId = $_SESSION['gameId'];
 $game = $model->getGame($gameId);
-var_dump($game);
 $gameName = $game['nom'];
 $gameImage = $game['image_url'];
 
