@@ -6,5 +6,4 @@ class GameDetailModel extends DBModel{
         parent::__construct();
     }
 
-
 }
