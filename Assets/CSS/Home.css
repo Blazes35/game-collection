@@ -29,10 +29,12 @@
     color: #fff;
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0) 100%);
     background-size: cover;
     background-position: center;
     position: relative;
+}
+.card-form{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0) 100%);
 }
 
 .card-body {

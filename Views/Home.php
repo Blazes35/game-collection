@@ -15,7 +15,7 @@ if (isset($playerData) && isset($playerGames)) {
     <div class="game-list">
     <?php foreach ($games as $game): ?>
         <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
-            <form action='/GameDetail' method='post'>
+            <form action='/GameDetail' method='post' class="card-form">
                 <input type='hidden' name='gameId' value='<?= htmlspecialchars($game['id']) ?>'>
                 <button type='submit' class='btn'>
                      <div class="card-body">
