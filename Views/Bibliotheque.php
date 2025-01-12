@@ -1,5 +1,5 @@
 <?php
-  ob_start();  
+  ob_start();
 ?>
 <link rel="stylesheet" href="/Assets/CSS/Home.css">
 <?php
@@ -13,8 +13,7 @@ if (isset($playerData) && isset($playerGames)) {
     echo "<h2 class='Vos-jeux'>VOICI VOS JEUX :</h3>";
     echo "</div>"?>
     <div class="game-list">
-    <?php for($i = 0; $i < 4; $i++):?>
-        <?php $game = $games[$i]; ?>
+    <?php foreach ($games as $game): ?>
         <form id="postForm" action="/GameDetail" method="post" style="display:none;">
             <input type="hidden" name="gameId" value="<?=$game['id']?>">
         </form>
@@ -30,7 +29,7 @@ if (isset($playerData) && isset($playerGames)) {
             </div>
         </div>
         </a>
-    <?php endfor;?>
+    <?php endforeach;?>
 </div>
 <?php
 } else {
