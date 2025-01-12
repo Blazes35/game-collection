@@ -3,13 +3,11 @@ require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 
 function cumulerTempsDeJeu($model,$joueurId) {
-
     $tempsTotal = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
         $tempsTotal += $partie['temps_de_jeu'];
     }
-    echo 'cumulerTempsDeJeu fin';
     return $tempsTotal;
 }
 function jeuLePlusJoue($model,$joueurId) {
