@@ -19,6 +19,8 @@ if (isset($playerData) && isset($playerGames)) {
                 <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
                 <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
                 <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
+                <p class="card-text"><?= htmlspecialchars($game['editeur']) ?></p>
+                <p class="card-text"><?= htmlspecialchars($game['date_sortie']) ?></p>
                 <p class="card-text"><?= round($game['temps_de_jeu'] / 60, 2) ?> heures de jeu</p>
             </div>
         </div>
