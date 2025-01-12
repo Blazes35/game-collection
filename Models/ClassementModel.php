@@ -14,7 +14,7 @@ class ClassementModel extends DBModel {
                 ON utilisateur.id = utilisateur_jeu.id
             JOIN jeu 
                 ON utilisateur_jeu.id = jeu.id
-            ORDER BY utilisateur_jeu.temps_de_jeu DESC;
+            ORDER BY temps_de_jeu DESC;
         ");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
