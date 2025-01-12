@@ -25,19 +25,20 @@ function jeuLePlusJoue($model,$joueurId) {
 $topJoueurs = [];
 $classement = $model->getClassement();
 foreach ($classement as $joueur) {
-    if (!array_key_exists($joueur['id'], $topJoueurs)) {
+    if (!in_array($joueur['id'], array_column($topJoueurs, 'joueur_id'))) {
         $joueurId = $joueur['id'];
-    $nom = $joueur['nom'];
-    $prenom = $joueur['prenom'];
-    $tempsDeJeu = cumulerTempsDeJeu($model,$joueurId);
-    $jeuFavori = jeuLePlusJoue($model,$joueurId);
-    $topJoueurs[] = [
-        'joueur_id' => $joueurId,
-        'nom' => $nom,
-        'prenom' => $prenom,
-        'temps_de_jeu' => $tempsDeJeu,
-        'jeu_favori' => $jeuFavori
-    ];
+        $nom = $joueur['nom'];
+        $prenom = $joueur['prenom'];
+        $tempsDeJeu = cumulerTempsDeJeu($model, $joueurId);
+        $jeuFavori = jeuLePlusJoue($model, $joueurId);
+        $topJoueurs[] = [
+            'joueur_id' => $joueurId,
+            'nom' => $nom,
+            'prenom' => $prenom,
+            'temps_de_jeu' => $tempsDeJeu,
+            'jeu_favori' => $jeuFavori
+        ];
+    }
     }
     
     usort($topJoueurs, function($a, $b) {
