@@ -16,16 +16,12 @@ ob_start();
                 </tr>
             </thead>
             <tbody>
-                <?php foreach (array_slice($classement, 0, 20) as $joueur): ?>
-                    <?php 
-                        $tempsTotal = cumulerTempsDeJeu($joueur['id']);
-                        $jeufav = jeuLePlusJoue($joueur['id']);
-                        ?>
+                <?php foreach (array_slice($topJoueurs, 0, 20) as $joueur): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
-                        <td><?php echo htmlspecialchars($tempsTotal); ?></td>
-                        <td><?php echo htmlspecialchars($jeufav); ?></td>
+                        <td><?php echo htmlspecialchars($joueur['temps_de_jeu']); ?></td>
+                        <td><?php echo htmlspecialchars($joueur['jeu_favori']); ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
