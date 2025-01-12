@@ -24,6 +24,10 @@ if (isset($playerData) && isset($playerGames)) {
                 <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures</p>
             </div>
         </div>
+        <form id="postForm" action="/GameDetail" method="post" style="display:none;">
+            <input type="hidden" name="gameId" value="<?=$game['id']?>">
+        </form>
+        <a href="#" onclick="document.getElementById('postForm').submit(); return false;">Post Link</a>
     <?php endforeach;?>
 </div>
 <?php
