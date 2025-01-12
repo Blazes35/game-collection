@@ -10,9 +10,11 @@ ob_start();
 </div>
 <form action='/ChangeGameTime' method='post' class="add-game-form">
     <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu">
+    <input type="hidden" name="gameId" value="<?=$gameId?>">
     <button type="submit" class='btn' >Valider</button>
 </form>
 <form action='/ChangeGameTime' method="post" class="add-game-form">
+    <input type="hidden" name="gameId" value="<?=$gameId?>">
     <button type="submit" name='delete' class='btn'>Supprimer</button>
 </form>
 
