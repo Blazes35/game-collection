@@ -2,10 +2,7 @@
 require_once 'Models/GameDetailModel.php';
 $model = new GameDetailModel();
 
-$gameId = $_POST['gameId'] ?? $_SESSION['gameId'];
-var_dump($_POST);
-echo "\nSession :";
-var_dump($_SESSION);
+$gameId = $_POST['gameId'];
 $game = $model->getGame($gameId);
 $gameName = $game['nom'];
 $gameImage = $game['image_url'];

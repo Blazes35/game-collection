@@ -21,8 +21,7 @@ ob_start();
                     <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
                     <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
                     <form action='/GameDetail' method='post'>
-                        <input type='hidden' name='page' value='Form'>
-                        <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['id']) ?>'>
+                        <input type='hidden' name='gameId' value='<?= htmlspecialchars($game['id']) ?>'>
                         <button type='submit' class='btn'>Ajouter à ma bibliothèque</button>
                     </form>
                 </div>
