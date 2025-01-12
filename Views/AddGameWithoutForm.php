@@ -26,7 +26,7 @@ ob_start();
                         <button type='submit' class='btn'>Ajouter à ma bibliothèque</button>
                     </form>
                 </div>
-        </div>
+            </div>
         <?php endforeach; ?>
     
 
