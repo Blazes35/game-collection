@@ -1,16 +1,18 @@
 <?php
-require_once 'Models/ClassementModel.php';
-$model = new ClassementModel();
+
 $compte=0;
 function cumulerTempsDeJeu($joueurId) {
+
     $tempsTotal = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
         $tempsTotal += $partie['temps_de_jeu'];
     }
+    echo 'cumulerTempsDeJeu fin';
     return $tempsTotal;
 }
 function jeuLePlusJoue($joueurId) {
+    echo 'jeuLePlusJoue debut';
     $jeux = [];
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
@@ -21,9 +23,9 @@ function jeuLePlusJoue($joueurId) {
         $jeux[$jeuId] += $partie['temps_de_jeu'];
     }
     arsort($jeux);
+    echo 'jeuLePlusJoue fin';
     return key($jeux);
 }
-
 $topJoueurs = [];
 $classement = $model->getClassement();
 foreach ($classement as $joueur) {
@@ -45,5 +47,6 @@ foreach ($classement as $joueur) {
         return $b['temps_de_jeu'] - $a['temps_de_jeu'];
     });
 }
+var_dump($topJoueurs);
 include 'Views/Classement.php';
 ?>
