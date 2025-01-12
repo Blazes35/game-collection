@@ -18,9 +18,9 @@ class ClassementModel extends DBModel {
 
     public function getPartiesByJoueur($joueurId) {
         $stmt = $this->getDB()->prepare("
-            SELECT nom,temps_de_jeu
+            SELECT jeu.nom,temps_de_jeu
             FROM `utilisateur_jeu` JOIN utilisateur ON utilisateur_jeu.utilisateur_id=utilisateur.id JOIN jeu ON utilisateur_jeu.jeu_id=jeu.id 
-            WHERE utilisateur.id = :joueurId;
+            WHERE utilisateur.id = 7;
         ");
         $stmt->bindParam(':joueurId', $joueurId);
         $stmt->execute();
