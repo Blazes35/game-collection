@@ -24,6 +24,7 @@ function jeuLePlusJoue($model,$joueurId) {
     echo 'jeuLePlusJoue fin';
     return $nom;
 }
+echo 'ok';
 $topJoueurs = [];
 $classement = $model->getClassement();
 foreach ($classement as $joueur) {
