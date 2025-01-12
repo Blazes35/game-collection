@@ -17,6 +17,7 @@ ob_start();
             </thead>
             <tbody>
                 <?php foreach (array_slice($topJoueurs, 0, 20) as $joueur): ?>
+                    <?php if ($joueur['temps_de_jeu'] != 0) continue; ?>
                     <tr>
                         <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
