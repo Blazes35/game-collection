@@ -24,6 +24,24 @@ function jeuLePlusJoue($joueurId) {
     return key($jeux);
 }
 
+$topJoueurs = [];
 $classement = $model->getClassement();
+foreach ($classement as $joueur) {
+    $joueurId = $joueur['id'];
+    $nom = $joueur['nom'];
+    $prenom = $joueur['prenom'];
+    $tempsDeJeu = cumulerTempsDeJeu($joueurId);
+    $jeuFavori = jeuLePlusJoue($joueurId);
+    $topJoueurs[] = [
+        'joueur_id' => $joueurId,
+        'nom' => $nom,
+        'prenom' => $prenom,
+        'temps_de_jeu' => $tempsDeJeu,
+        'jeu_favori' => $jeuFavori
+    ];
+    usort($topJoueurs, function($a, $b) {
+        return $b['temps_de_jeu'] - $a['temps_de_jeu'];
+    });
+}
 include 'Views/Classement.php';
 ?>
