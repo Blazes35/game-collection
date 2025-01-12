@@ -47,6 +47,7 @@ switch ($page) {
         break;
     case 'Bibliotheque' :
         include 'Controllers/BibliothequeController.php';
+        break;
     default:
         include 'Views/Error404.php';
         break;
