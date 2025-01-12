@@ -12,7 +12,7 @@ ob_start();
     <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu">
     <button type="submit" class='btn' >Valider</button>
 </form>
-<form action='/ChangeGameTime' method="post">
+<form action='/ChangeGameTime' method="post" class="add-game-form">
     <button type="submit" name='delete' class='btn'>Supprimer</button>
 </form>
 
