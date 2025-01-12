@@ -25,7 +25,7 @@ ob_start();
                     <td><?php echo htmlspecialchars($joueur['prenom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom_jeu']) ?></td>
-                    <td><?php echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));}?>
+                    <td><?php echo htmlspecialchars(sprintf('%02d h %02d', $heures, $minutes));}?>
                     </td>
                 </tr>
             <?php endforeach; ?>
