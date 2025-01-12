@@ -20,7 +20,7 @@ ob_start();
                     <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
                     <p class="card-text"><?= htmlspecialchars($game['description']) ?></p>
                     <p class="card-text"><?= htmlspecialchars($game['plateforme']) ?></p>
-                    <form action='/WithoutForm' method='post'>
+                    <form action='/ChangeGameTime' method='post'>
                         <input type='hidden' name='page' value='Form'>
                         <input type='hidden' name='addGame' value='<?= htmlspecialchars($game['id']) ?>'>
                         <button type='submit' class='btn'>Ajouter à ma bibliothèque</button>
