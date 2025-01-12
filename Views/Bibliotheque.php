@@ -14,10 +14,10 @@ if (isset($playerData) && isset($playerGames)) {
     echo "</div>"?>
     <div class="game-list">
     <?php foreach ($games as $game): ?>
-        <form id="<?=game['id']?>" action="/GameDetail" method="post" style="display:none;">
+        <form id="<?=$game['id']?>" action="/GameDetail" method="post" style="display:none;">
             <input type="hidden" name="gameId" value="<?=$game['id']?>">
         </form>
-        <a href="#" onclick="document.getElementById('<?=game['id']?>').submit(); return false;">
+        <a href="#" onclick="document.getElementById('<?=$game['id']?>').submit(); return false;">
              <div class="card" style="background-image: url('<?= $game['image_url'] ?>');">
              <div class="card-body">
                 <h3 class="card-title"><?= htmlspecialchars($game['nom']) ?></h3>
