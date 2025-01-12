@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         exit();
     }else if(isset($_POST['delete'])){
         $model->deleteGame($_SESSION['id'], $gameId);
-        header('Location: /');
+        header('Location: /Bibliotheque');
         exit();
     }
 }
