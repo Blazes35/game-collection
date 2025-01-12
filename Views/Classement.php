@@ -7,28 +7,24 @@ ob_start();
     <?php 
     if (isset($classement) && !empty($classement)): ?>
         <table>
-            <tr>
-                <th>Position</th>
-                <th>Prénom</th>
-                <th>Nom</th>
-                <th>Nom du Jeu</th>
-                <th>Total Heures de Jeu</th>
-            </tr>
-            <?php foreach ($classement as $joueur): ?>
+            <thead>
                 <tr>
-                    <?php $compte++;
-                    $heures = floor($joueur['temps_de_jeu'] / 60);
-                    $minutes = $joueur['temps_de_jeu'] % 60;
-                    if ($heures != 0){ 
-                    ?>
-                    <td><?php echo $compte?></td>
-                    <td><?php echo htmlspecialchars($joueur['prenom']) ?></td>
-                    <td><?php echo htmlspecialchars($joueur['nom']) ?></td>
-                    <td><?php echo htmlspecialchars($joueur['nom_jeu']) ?></td>
-                    <td><?php echo htmlspecialchars(sprintf('%02d h %02d', $heures, $minutes));}?>
-                    </td>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Temps de jeu cumulé</th>
+                    <th>Jeu favori</th>
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody>
+                <?php foreach (array_slice($classement, 0, 20) as $joueur): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
+                        <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
+                        <td><?php echo htmlspecialchars($joueur->getTempsDeJeu()); ?></td>
+                        <td><?php echo htmlspecialchars($joueur->getJeuFavori()); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     <?php else: ?>
         <p style="text-align: center;">Le classement n'est pas disponible ou la liste est vide.</p>
