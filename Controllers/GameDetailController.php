@@ -3,11 +3,7 @@ require_once 'Models/GameDetailModel.php';
 $model = new GameDetailModel();
 
 $gameId = $_POST['gameId'];
-var_dump($_POST);
-echo "||||||| Session :";
-var_dump($_SESSION);
 $game = $model->getGame($gameId);
-var_dump($game);
 $gameName = $game['nom'];
 $gameImage = $game['image_url'];
 
