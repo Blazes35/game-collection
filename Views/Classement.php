@@ -22,8 +22,8 @@ ob_start();
                         $jeufav = jeuLePlusJoue($joueur['id']);?>
                         <td><?php echo htmlspecialchars($joueur['nom']); ?></td>
                         <td><?php echo htmlspecialchars($joueur['prenom']); ?></td>
-                        <td><?php $tempsTotal?></td>
-                        <td><?php $jeufav?></td>
+                        <td><?php echo $tempsTotal?></td>
+                        <td><?php echo $jeufav?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
