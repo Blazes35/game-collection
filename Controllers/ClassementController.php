@@ -44,7 +44,7 @@ foreach ($classement as $joueur) {
     usort($topJoueurs, function($a, $b) {
         return $b['temps_de_jeu'] - $a['temps_de_jeu'];
     });
-}
+
 var_dump($topJoueurs);
 include 'Views/Classement.php';
 ?>
