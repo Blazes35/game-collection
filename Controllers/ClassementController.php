@@ -26,9 +26,9 @@ function jeuLePlusJoue($model,$joueurId) {
 }
 $topJoueurs = [];
 $classement = $model->getClassement();
-echo 'classement';
-var_dump($classement);
 foreach ($classement as $joueur) {
+    echo'joueur';
+    var_dump($joueur);
     $joueurId = $joueur['id'];
     $nom = $joueur['nom'];
     $prenom = $joueur['prenom'];
