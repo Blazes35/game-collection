@@ -16,7 +16,16 @@ class ClassementModel extends DBModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-
+    public function getPartiesByJoueur($joueurId) {
+        $stmt = $this->getDB()->prepare("
+            SELECT temps_de_jeu
+            FROM `utilisateur_jeu` JOIN utilisateur ON utilisateur_jeu.utilisateur_id=utilisateur.id JOIN jeu ON utilisateur_jeu.jeu_id=jeu.id 
+            WHERE utilisateur.id = :joueurId;
+        ");
+        $stmt->bindParam(':joueurId', $joueurId);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 ?>

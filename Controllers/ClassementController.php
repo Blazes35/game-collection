@@ -2,7 +2,7 @@
 require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 
-function cumulerTempsDeJeu($joueurId) {
+function cumulerTempsDeJeu($model,$joueurId) {
 
     $tempsTotal = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
@@ -12,7 +12,7 @@ function cumulerTempsDeJeu($joueurId) {
     echo 'cumulerTempsDeJeu fin';
     return $tempsTotal;
 }
-function jeuLePlusJoue($joueurId) {
+function jeuLePlusJoue($model,$joueurId) {
     echo 'jeuLePlusJoue debut';
     $jeux = [];
     $parties = $model->getPartiesByJoueur($joueurId);
@@ -33,9 +33,9 @@ foreach ($classement as $joueur) {
     $joueurId = $joueur['id'];
     $nom = $joueur['nom'];
     $prenom = $joueur['prenom'];
-    $tempsDeJeu = cumulerTempsDeJeu($joueurId);
+    $tempsDeJeu = cumulerTempsDeJeu($model,$joueurId);
     var_dump($tempsDeJeu);
-    $jeuFavori = jeuLePlusJoue($joueurId);
+    $jeuFavori = jeuLePlusJoue($model,$joueurId);
     var_dump($jeuFavori);
     $topJoueurs[] = [
         'joueur_id' => $joueurId,
