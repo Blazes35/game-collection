@@ -14,33 +14,39 @@ $dotenv->load();
 require '.db.php';
 
 // routage
-$page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : 'Home';
+$page = $_POST['page'] ?? isset($_GET['page']) && $_GET['page'] != '' ? $_GET['page'] : '';
+
 switch ($page) {
+    case 'index.php':
     case 'Home':
-        include 'Views/Home.php';
+        include 'Controllers/HomeController.php';
         break;
     case 'Form':
         include 'Controllers/FormController.php';
         break;
     case 'WithoutForm':
-        include 'Controllers/AddGameWithoutForm.php';
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/AddGameWithoutForm.php';
         break;
     case 'SignUp':
         include 'Controllers/SignUpController.php';
         break;
     case 'Connection':
         include 'Controllers/ConnectionController.php';
-    break;
+        break;
     case 'Classement':
         include 'Controllers/ClassementController.php';
-    break;
+        break;
     case 'Profil':
-        isset($_SESSION['id']) ? include 'Controllers/ProfilController.php' : include 'Controllers/ConnectionController.php';
-    break;
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/ProfilController.php';
+        break;
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
-    break;
+        break;
+    case 'GameDetail':
+        !isset($_SESSION['id']) ? include 'Controllers/ConnectionController.php' : include 'Controllers/GameDetailController.php';
+        break;
     default:
         include 'Views/Error404.php';
         break;
 }
+
