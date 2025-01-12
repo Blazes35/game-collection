@@ -23,8 +23,7 @@ function jeuLePlusJoue($joueurId) {
     arsort($jeux);
     return key($jeux);
 }
-echo jeuLePlusJoue(7);
-echo cumulerTempsDeJeu(7);
+
 $classement = $model->getClassement();
 include 'Views/Classement.php';
 ?>
