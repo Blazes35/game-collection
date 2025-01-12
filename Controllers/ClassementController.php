@@ -26,6 +26,7 @@ function jeuLePlusJoue($model,$joueurId) {
 }
 $topJoueurs = [];
 $classement = $model->getClassement();
+var_dump($classement);
 foreach ($classement as $joueur) {
     $joueurId = $joueur['id'];
     $nom = $joueur['nom'];
@@ -45,5 +46,6 @@ foreach ($classement as $joueur) {
         return $b['temps_de_jeu'] - $a['temps_de_jeu'];
     });
 }
+var_dump($topJoueurs);
 include 'Views/Classement.php';
 ?>
