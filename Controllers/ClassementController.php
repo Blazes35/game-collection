@@ -1,6 +1,6 @@
 <?php
-
-$compte=0;
+require_once 'Models/ClassementModel.php';
+$model = new ClassementModel();
 function cumulerTempsDeJeu($joueurId) {
 
     $tempsTotal = 0;
