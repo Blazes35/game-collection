@@ -3,7 +3,7 @@ require_once 'Models/ClassementModel.php';
 $model = new ClassementModel();
 $compte=0;
 function cumulerTempsDeJeu($joueurId) {
-    echo 'cumulerTempsDeJeu debut';
+
     $tempsTotal = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
     foreach ($parties as $partie) {
