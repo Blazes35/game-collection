@@ -12,7 +12,7 @@ ob_start();
     <div class="card-body">
         <h3 class="card-title"><?php echo $gameName ?></h3>
         <form action='/GameDetail' method='post' class="add-game-form">
-            <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu">
+            <input type="number" name="temps_de_jeu" class='input-field' placeholder="Temps de jeu en (min)">
             <button type="submit" class='btn' >Valider</button>
         </form>
     </div>
