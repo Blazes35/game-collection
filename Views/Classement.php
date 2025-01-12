@@ -16,20 +16,16 @@ ob_start();
             </tr>
             <?php foreach ($classement as $joueur): ?>
                 <tr>
-                    <?php $compte++; ?>
+                    <?php $compte++;
+                    $heures = floor($joueur['temps_de_jeu'] / 60);
+                    $minutes = $joueur['temps_de_jeu'] % 60;
+                    if ($heures != 0){ 
+                    ?>
                     <td><?php echo $compte?></td>
                     <td><?php echo htmlspecialchars($joueur['prenom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom']) ?></td>
                     <td><?php echo htmlspecialchars($joueur['nom_jeu']) ?></td>
-                    <td>
-                        <?php 
-                        $heures = floor($joueur['temps_de_jeu'] / 60);
-                        $minutes = $joueur['temps_de_jeu'] % 60;
-                        if ($heures != 0){
-                            echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));
-                        }
-                        
-                        ?>
+                    <td><?php echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));}?>
                     </td>
                 </tr>
             <?php endforeach; ?>
