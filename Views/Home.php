@@ -21,7 +21,7 @@ if (isset($playerData) && isset($playerGames)) {
                 <p class="card-text">Plateform : <?= htmlspecialchars($game['plateforme']) ?></p>
                 <p class="card-text">Editeur : <?= htmlspecialchars($game['editeur']) ?></p>
                 <p class="card-text">Date de sortie : <?= htmlspecialchars($game['date_sortie']) ?></p>
-                <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures de jeu</p>
+                <p class="card-text">Temps de jeu : <?= round($game['temps_de_jeu'] / 60, 2) ?> heures</p>
             </div>
         </div>
     <?php endforeach;?>
