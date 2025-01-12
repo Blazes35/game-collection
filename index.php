@@ -42,6 +42,9 @@ switch ($page) {
     case 'ModifierProfil':
         include 'Controllers/ModifierProfilController.php';
         break;
+    case 'GameDetail':
+        include 'Controllers/GameDetailController.php';
+        break;
     default:
         include 'Views/Error404.php';
         break;
