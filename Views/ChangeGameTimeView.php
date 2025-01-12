@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/Assets/CSS/ChangeGameTime.css">
+<link rel="stylesheet" href="/Assets/CSS/GameDetail.css"> </link>
 <?php
 $Title = "Changer la durée de jeu";
 ob_start();
