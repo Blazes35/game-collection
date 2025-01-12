@@ -4,10 +4,7 @@ $Title = "Changer la durée de jeu";
 ob_start();
 ?>
 
-<?php echo $_SESSION['gameId'] ?>
-<h1>Ajouter le temps passer sur ce jeux</h1>
-
-
+<h1>Changer la durée de jeu</h1>
 <div class="card" style="background-image: url('<?=$gameImage?>');">
     <div class="card-body">
         <h3 class="card-title"><?php echo $gameName ?></h3>
