@@ -20,8 +20,7 @@ function jeuLePlusJoue($model,$joueurId) {
             $nom = $partie['nom'];
         }
     }
-    arsort($jeux);
-    return key($jeux);
+    return $nom;
 }
 $topJoueurs = [];
 $classement = $model->getClassement();
