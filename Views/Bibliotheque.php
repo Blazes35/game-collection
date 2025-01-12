@@ -13,7 +13,7 @@ if (isset($playerData) && isset($playerGames)) {
     echo "<h2 class='Vos-jeux'>VOICI VOS JEUX :</h3>";
     echo "</div>"?>
     <div class="game-list">
-    <?php for($i = 0; $i < 3; $i++):?>
+    <?php for($i = 0; $i < 4; $i++):?>
         <?php $game = $games[$i]; ?>
         <form id="postForm" action="/GameDetail" method="post" style="display:none;">
             <input type="hidden" name="gameId" value="<?=$game['id']?>">
