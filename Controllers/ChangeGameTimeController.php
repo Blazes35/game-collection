@@ -2,7 +2,7 @@
 require_once 'Models/ChangeGameTimeModel.php';
 $model = new ChangeGameTimeModel();
 
-$gameId = $_SESSION['gameId'];
+$gameId = $_POST['gameId'] ?? $_SESSION['gameId'];
 $game = $model->getGame($gameId);
 $gameName = $game['nom'];
 $gameImage = $game['image_url'];
