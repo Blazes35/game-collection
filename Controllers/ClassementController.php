@@ -5,8 +5,6 @@ $model = new ClassementModel();
 function cumulerTempsDeJeu($model,$joueurId) {
     $tempsTotal = 0;
     $parties = $model->getPartiesByJoueur($joueurId);
-    echo'cumulerTempsDeJeu';
-    var_dump($parties);
     foreach ($parties as $partie) {
         $tempsTotal += $partie['temps_de_jeu'];
     }
@@ -29,16 +27,12 @@ function jeuLePlusJoue($model,$joueurId) {
 $topJoueurs = [];
 $classement = $model->getClassement();
 foreach ($classement as $joueur) {
-    echo'joueur';
-    var_dump($joueur);
-    $joueurId = $joueur['id'];
+    if (array_key_exists($joueur['id'], $topJoueurs)) {
+        $joueurId = $joueur['id'];
     $nom = $joueur['nom'];
     $prenom = $joueur['prenom'];
     $tempsDeJeu = cumulerTempsDeJeu($model,$joueurId);
-    echo'cumulerTempsDeJeu';
-    var_dump($tempsDeJeu);
     $jeuFavori = jeuLePlusJoue($model,$joueurId);
-    var_dump($jeuFavori);
     $topJoueurs[] = [
         'joueur_id' => $joueurId,
         'nom' => $nom,
@@ -46,6 +40,8 @@ foreach ($classement as $joueur) {
         'temps_de_jeu' => $tempsDeJeu,
         'jeu_favori' => $jeuFavori
     ];
+    }
+    
     usort($topJoueurs, function($a, $b) {
         return $b['temps_de_jeu'] - $a['temps_de_jeu'];
     });
