@@ -31,7 +31,9 @@ foreach ($classement as $joueur) {
     $nom = $joueur['nom'];
     $prenom = $joueur['prenom'];
     $tempsDeJeu = cumulerTempsDeJeu($joueurId);
+    var_dump($tempsDeJeu);
     $jeuFavori = jeuLePlusJoue($joueurId);
+    var_dump($jeuFavori);
     $topJoueurs[] = [
         'joueur_id' => $joueurId,
         'nom' => $nom,
