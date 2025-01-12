@@ -2,6 +2,10 @@
 require_once 'DBModel.php';
 
 class ClassementModel extends DBModel {
+    public function __construct() {
+        parent::__construct();
+    }
+    
     public function getClassement() {
         $stmt = $this->getDB()->prepare("
             SELECT utilisateur.id, utilisateur.nom,prenom,jeu.nom AS nom_jeu, temps_de_jeu 
