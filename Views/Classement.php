@@ -16,10 +16,16 @@ ob_start();
             </tr>
             <?php foreach ($classement as $joueur): ?>
                 <tr>
-                    <td><?= htmlspecialchars($joueur['prenom']) ?></td>
-                    <td><?= htmlspecialchars($joueur['nom']) ?></td>
-                    <td><?= htmlspecialchars($joueur['nom_jeu']) ?></td>
-                    <td><?= htmlspecialchars($joueur['temps_de_jeu']) ?></td>
+                    <td><?php echo htmlspecialchars($joueur['prenom']) ?></td>
+                    <td><?php echo htmlspecialchars($joueur['nom']) ?></td>
+                    <td><?php echo htmlspecialchars($joueur['nom_jeu']) ?></td>
+                    <td>
+                        <?php 
+                        $heures = floor($joueur['temps_de_jeu'] / 60);
+                        $minutes = $joueur['temps_de_jeu'] % 60;
+                        echo htmlspecialchars(sprintf('%02d:%02d', $heures, $minutes));
+                        ?>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
