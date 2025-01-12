@@ -28,8 +28,6 @@ ob_start();
                 </div>
             </div>
         <?php endforeach; ?>
-    
-
 </div>
 
 

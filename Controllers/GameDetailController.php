@@ -4,7 +4,7 @@ $model = new GameDetailModel();
 
 $gameId = $_POST['gameId'] ?? $_SESSION['gameId'];
 var_dump($_POST);
-echo "\n";
+echo "\nSession :";
 var_dump($_SESSION);
 $game = $model->getGame($gameId);
 $gameName = $game['nom'];
