@@ -8,10 +8,7 @@ Ce dépôt contient le projet **Game Collection**, réalisé par le Groupe 4 dan
 - [Lien Figma](#lien-figma)
 - [Fonctionnalités](#fonctionnalités)
 - [Technologies utilisées](#technologies-utilisées)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
 - [Contributeurs](#contributeurs)
-- [Licence](#licence)
 
 ## Description
 
@@ -33,3 +30,11 @@ Pour consulter le prototype/design de l'interface, rendez-vous sur le [Figma du 
 - **PHP** – Langage de programmation côté serveur.
 - **CSS** – Pour la mise en forme et le design de l'interface.
 - **HTML** – Structure des pages web.
+
+## Contributeurs
+
+- [Loris ADAM](https://github.com/Blazes35)
+- [Aymeric Cherbonnier](https://github.com/AyScorp)
+- [Mathilde Moreau](https://github.com/mathilde2801)
+- [gdodin](https://github.com/gdodin)
+
